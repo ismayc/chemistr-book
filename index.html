@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>LeaRning R in ChemistRy at Reed College</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="A help manual for working with RStudio and R Markdown in completing labs for Chem 101/102 at Reed College">
+  <meta name="generator" content="bookdown 0.1 and GitBook 2.6.7">
+
+  <meta property="og:title" content="LeaRning R in ChemistRy at Reed College" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="A help manual for working with RStudio and R Markdown in completing labs for Chem 101/102 at Reed College" />
+  <meta name="github-repo" content="ismayc/chemistr-book-source" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="LeaRning R in ChemistRy at Reed College" />
+  
+  <meta name="twitter:description" content="A help manual for working with RStudio and R Markdown in completing labs for Chem 101/102 at Reed College" />
+  
+
+<meta name="author" content="Chester Ismay">
+
+<meta name="date" content="2016-09-02">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+
+<link rel="next" href="2-begin.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="2-begin.html"><a href="2-begin.html"><i class="fa fa-check"></i><b>2</b> Starting The Labs</a><ul>
+<li class="chapter" data-level="2.1" data-path="2-begin.html"><a href="2-begin.html#working-in-rstudio-server"><i class="fa fa-check"></i><b>2.1</b> Working in RStudio Server</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="2-begin.html"><a href="2-begin.html#logging-in-and-initial-screen"><i class="fa fa-check"></i><b>2.1.1</b> Logging in and initial screen</a></li>
+<li class="chapter" data-level="2.1.2" data-path="2-begin.html"><a href="2-begin.html#basic-workflow-with-rstudio"><i class="fa fa-check"></i><b>2.1.2</b> Basic Workflow with RStudio</a></li>
+<li class="chapter" data-level="2.1.3" data-path="2-begin.html"><a href="2-begin.html#sharing-projects-on-rstudio-server-pro"><i class="fa fa-check"></i><b>2.1.3</b> Sharing Projects on RStudio Server Pro</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-references.html"><a href="3-references.html"><i class="fa fa-check"></i><b>3</b> References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+<li><a href="https://github.com/ismayc/rbasics/issues" target="blank">Create a GitHub Issue</a></li>
+<li><a href="mailto:chester.ismay@gmail.com" target="blank">Email Chester</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">LeaRning R in ChemistRy at Reed College</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">LeaRning R in ChemistRy at Reed College</h1>
+<h4 class="author"><em>Chester Ismay</em></h4>
+<h4 class="date"><em>2016-09-02</em></h4>
+</div>
+<div id="intro" class="section level1">
+<h1><span class="header-section-number">1</span> Introduction</h1>
+<p>In the HTML version of this book, you can alo download the PDF version of the book by clicking on PDF button in the top toolbar of the page. HTML is the preferred format but the PDF format may be preferred for some readers. Links to the different GIFs directly found in the HTML version are provided in the PDF version.</p>
+<p>This resource is designed to assist students in CHEM 101/102 in using RStudio and R Markdown to complete their labs. A more general reference to the specifics of R, RStudio and R Markdown is available in a different free book <a href="http://ismayc.github.io/rbasics-book">here</a>. This resource will show you GIFs explaining how to do some common procedures you’ll need to do to complete labs. In addition, it will provide more details about the specifics of the different lab templates available in the <code>chemistr</code> R package. Each chapter of this book will correspond to each of the different labs.</p>
+<p>If further clarification is needed on any other aspect of the book, please email <a href="mailto:cismay@reed.edu">me</a> with a reference to the error/area where more guidance is necessary. More advanced users are encouraged to create a GitHub issue <a href="https://github.com/ismayc/rbasics/issues">here</a>. Pull requests on GitHub for typos or improvements are also welcome and you can easily do so by clicking on the Edit button near Search at the top of the HTML version of the book.</p>
+<p>This book will evolve and be updated as needed based on feedback. You can always check the date below to see when the book was last updated. It is recommended that you use Google Chrome as your browser since GIFs sometimes do not load automatically with other browsers.</p>
+<p><strong>Book was last updated:</strong></p>
+<pre><code>## [1] &quot;By cismay on Friday, September 02, 2016 17:39:30 PDT&quot;</code></pre>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="2-begin.html" class="navigation navigation-next navigation-unique" aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/ismayc/chemistr-book-source/edit/master/index.Rmd",
+"text": null
+},
+"download": ["rbasics.pdf"],
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+}
+});
+});
+</script>
+
+</body>
+
+</html>

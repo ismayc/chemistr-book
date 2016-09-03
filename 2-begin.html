@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>LeaRning R in ChemistRy at Reed College</title>
+  <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+  <meta name="description" content="A help manual for working with RStudio and R Markdown in completing labs for Chem 101/102 at Reed College">
+  <meta name="generator" content="bookdown 0.1 and GitBook 2.6.7">
+
+  <meta property="og:title" content="LeaRning R in ChemistRy at Reed College" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="A help manual for working with RStudio and R Markdown in completing labs for Chem 101/102 at Reed College" />
+  <meta name="github-repo" content="ismayc/chemistr-book-source" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="LeaRning R in ChemistRy at Reed College" />
+  
+  <meta name="twitter:description" content="A help manual for working with RStudio and R Markdown in completing labs for Chem 101/102 at Reed College" />
+  
+
+<meta name="author" content="Chester Ismay">
+
+<meta name="date" content="2016-09-02">
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="index.html">
+<link rel="next" href="3-references.html">
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="2-begin.html"><a href="2-begin.html"><i class="fa fa-check"></i><b>2</b> Starting The Labs</a><ul>
+<li class="chapter" data-level="2.1" data-path="2-begin.html"><a href="2-begin.html#working-in-rstudio-server"><i class="fa fa-check"></i><b>2.1</b> Working in RStudio Server</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="2-begin.html"><a href="2-begin.html#logging-in-and-initial-screen"><i class="fa fa-check"></i><b>2.1.1</b> Logging in and initial screen</a></li>
+<li class="chapter" data-level="2.1.2" data-path="2-begin.html"><a href="2-begin.html#basic-workflow-with-rstudio"><i class="fa fa-check"></i><b>2.1.2</b> Basic Workflow with RStudio</a></li>
+<li class="chapter" data-level="2.1.3" data-path="2-begin.html"><a href="2-begin.html#sharing-projects-on-rstudio-server-pro"><i class="fa fa-check"></i><b>2.1.3</b> Sharing Projects on RStudio Server Pro</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-references.html"><a href="3-references.html"><i class="fa fa-check"></i><b>3</b> References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+<li><a href="https://github.com/ismayc/rbasics/issues" target="blank">Create a GitHub Issue</a></li>
+<li><a href="mailto:chester.ismay@gmail.com" target="blank">Email Chester</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">LeaRning R in ChemistRy at Reed College</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="begin" class="section level1">
+<h1><span class="header-section-number">2</span> Starting The Labs</h1>
+<div id="working-in-rstudio-server" class="section level2">
+<h2><span class="header-section-number">2.1</span> Working in RStudio Server</h2>
+<div id="logging-in-and-initial-screen" class="section level3">
+<h3><span class="header-section-number">2.1.1</span> Logging in and initial screen</h3>
+<p>The RStudio Server provides a web-based way to run analyses in R. This means that you will only need an internet connection and a web browser to run your analyses. Your professor or administrator will provide you with a link to the web location of your RStudio Server. After entering the link, you’ll see a page that looks something like:</p>
+<div class="figure" style="text-align: center"><span id="fig:serverlogin"></span>
+<img src="screenshots/server_login.png" alt="Login page for RStudio Server" width="\textwidth" />
+<p class="caption">
+Figure 2.1: Login page for RStudio Server
+</p>
+</div>
+<p>After logging in with your username and password, you should see a layout similar to what follows.</p>
+<div class="figure" style="text-align: center"><span id="fig:initialrstudio"></span>
+<img src="screenshots/initial_rstudio.png" alt="Initial page for RStudio Server" width="\textwidth" />
+<p class="caption">
+Figure 2.2: Initial page for RStudio Server
+</p>
+</div>
+</div>
+<div id="basic-workflow-with-rstudio" class="section level3">
+<h3><span class="header-section-number">2.1.2</span> Basic Workflow with RStudio</h3>
+<p>A good habit to get into whenever you start a new project with R code is to create a new RStudio project to go along with it. RStudio project files have the extension <code>.Rproj</code> and store metadata that goes along with the documents you’ve saved and information about the R environment you are working in. More information about RStudio projects is available from RStudio, Inc. <a href="https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects">here</a>.</p>
+<p>If you are sharing homework or lab assignments with your instructor using RStudio Server, for example, it might make sense to create an RStudio project, share it with your instructor, and then create new folders for each lab. We will follow this example below.</p>
+<p>The GIF below shows you how to create a new RStudio project called <code>initial</code> and also your first R Markdown file. Note that you also may see a description about what version of R is running on your initial login like shown in the GIF below in the Console pane.</p>
+<div class="figure" style="text-align: center"><span id="fig:projrmd"></span>
+<img src="gifs/proj_rmd.gif" alt="Create a new RStudio project and an R Markdown file" width="\textwidth" />
+<p class="caption">
+Figure 2.3: Create a new RStudio project and an R Markdown file
+</p>
+</div>
+<p>We have our <strong>first_rmarkdown.Rmd</strong> file set up.</p>
+</div>
+<div id="sharing-projects-on-rstudio-server-pro" class="section level3">
+<h3><span class="header-section-number">2.1.3</span> Sharing Projects on RStudio Server Pro</h3>
+<p>You will now see an example of how to share this project with another user. This will enable you and collaborators (other students, your instructor, etc.) to work on the <strong>Rmd</strong> file at the same time. This is similar to working on a Google Doc at the same time as someone else.</p>
+<p>RStudio Server comes in a couple different formats and you’ll need to make sure you (or your IT administrator) have installed RStudio Server Pro to use the Shared Projects feature. You can find more information from RStudio, Inc. on this <a href="https://support.rstudio.com/hc/en-us/articles/211659737-Sharing-Projects-in-RStudio-Server-Pro">here</a>. Below is an example GIF of sharing this <strong>initial.Rproj</strong> project file with another user of the RStudio Server.</p>
+<div class="figure" style="text-align: center"><span id="fig:shareproj"></span>
+<img src="gifs/share_proj.gif" alt="Share an RStudio project on RStudio Server Pro" width="\textwidth" />
+<p class="caption">
+Figure 2.4: Share an RStudio project on RStudio Server Pro
+</p>
+</div>
+<p>Both myself and <code>bottk</code> can now work together on this project. We can type our commentary and code into <strong>first_rmarkdown.Rmd</strong> or other files and save files to the common folder where <strong>initial.Rproj</strong> resides.</p>
+<p><strong>Help</strong></p>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="3-references.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/ismayc/chemistr-book-source/edit/master/01-beginning.Rmd",
+"text": null
+},
+"download": ["rbasics.pdf"],
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+}
+});
+});
+</script>
+
+</body>
+
+</html>
