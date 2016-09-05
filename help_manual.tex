@@ -202,12 +202,12 @@ version are provided in the PDF version.
 This resource is designed to assist students in CHEM 101/102 in using
 RStudio and R Markdown to complete their labs. (A more general reference
 to the specifics of R, RStudio and R Markdown is available in a
-different free book \href{http://ismayc.github.io/rbasics-book}{here}).
-This resource will show you GIFs explaining how to do some common
-procedures you'll need to do to complete labs. In addition, it will
-provide more details about the specifics of the different lab templates
-available in the \texttt{chemistr} R package. Each chapter of this book
-will correspond to each of the different labs.
+different free book \href{http://ismayc.github.io/rbasics-book}{here}
+\citep{usedtor2016}). This resource will show you GIFs explaining how to
+do some common procedures you'll need to do to complete labs. In
+addition, it will provide more details about the specifics of the
+different lab templates available in the \texttt{chemistr} R package.
+Each chapter of this book will correspond to each of the different labs.
 
 Lastly, if you are interested, you'll find instructions on how to
 complete the labs using RStudio Desktop instead of the RStudio Server in
@@ -256,13 +256,13 @@ the VPN from off campus locations. After entering the link
 (\url{http://rstudio-dev.reed.edu}) into your browser, you'll see a page
 that looks something like:
 
-\begin{center}\includegraphics[width=\textwidth]{screenshots/server_login} \end{center}
+\begin{center}\includegraphics[width=0.5\linewidth]{screenshots/server_login} \end{center}
 
 After logging in with your Reed College username (mine is
 \texttt{cismay}, for example) and password, you should see a layout
 similar to what follows.
 
-\begin{center}\includegraphics[width=\textwidth]{screenshots/initial_rstudio} \end{center}
+\begin{center}\includegraphics[width=0.7\linewidth]{screenshots/initial_rstudio} \end{center}
 
 \subsection*{Creating and Sharing Projects using RStudio
 Server}\label{creating-and-sharing-projects-using-rstudio-server}
@@ -317,14 +317,14 @@ successfully.
 You'll see at the beginning of each chapter corresponding to the labs
 how you can access the different R Markdown template files for each lab.
 These template files are built into the \texttt{chemistr} package that I
-have already loaded on the Reed RStudio Server for you.{[}\^{}If you are
-completing the labs using RStudio Desktop, you'll see instructions on
-how to install this package onto your computer in the Appendix. After
-installing the package, you'll be able to use the R Markdown templates
-in much the same way students using the RStudio Server can. Note that if
-you are using the RStudio Desktop, you won't have access to the Shared
-Projects feature and it will be more difficult for Danielle and I to
-help you.{]}
+have already loaded on the Reed RStudio Server for you. \footnote{If you
+  are completing the labs using RStudio Desktop, you'll see instructions
+  on how to install this package onto your computer in the Appendix.
+  After installing the package, you'll be able to use the R Markdown
+  templates in much the same way students using the RStudio Server can.
+  Note that if you are using the RStudio Desktop, you won't have access
+  to the Shared Projects feature and it will be more difficult for
+  Danielle and I to help you.}
 
 \section*{Requesting help}\label{requesting-help}
 \addcontentsline{toc}{section}{Requesting help}
@@ -342,7 +342,7 @@ We encourage you to reach out to both of us and carefully explain what
 is going wrong with your R Markdown file. Sending us an email saying ``I
 can't get it to work, please help.'' is not insightful and won't help
 you learn in the long-run. Be as descriptive as possible. Something like
-what follows is much preferred:
+what follows is much preferred: \vspace{0.1in}
 
 \begin{quote}
 ``I'm receiving an error on line 46 of my Light lab about not finding an
@@ -350,6 +350,8 @@ object. I've tried Googling it and found a couple references about it
 including \textbf{link1} and \textbf{link2} but it's not working for
 me.''
 \end{quote}
+
+\vspace{0.1in}
 
 This tells us that you have tried to figure it out for yourself, but
 that you require our assistance. That is to be expected and you
@@ -360,17 +362,16 @@ We are here to help and please don't give up on this. Learning how to
 work with R even at the most basic of levels will help you long-term in
 keeping track of analyses and getting you on the path to reproducible
 research. This will help you in your academic careers and whatever you
-do after your academic career ends.
+do after your academic career ends. If you need assistance, please email
+\href{dcass@reed.edu}{Danielle} and \href{cismay@reed.edu}{Chester} with
+your concise error specifying in which lab and what the name of your
+RStudio project is. We are happy to help you learn how to use R!
 
-If you need assistance, please email \href{dcass@reed.edu}{Danielle} and
-\href{cismay@reed.edu}{Chester} with your concise error in which lab and
-what the name of your RStudio project is. We are happy to help you learn
-how to use R!
-
-\textbf{Book was last updated:}
+\subsection*{Book was last updated:}\label{book-was-last-updated}
+\addcontentsline{toc}{subsection}{Book was last updated:}
 
 \begin{verbatim}
-## [1] "By Chester on Sunday, September 04, 2016 13:32:00 PDT"
+## [1] "By Chester on Sunday, September 04, 2016 17:54:53 PDT"
 \end{verbatim}
 
 \chapter{Lab 1: Light}\label{light}
@@ -612,7 +613,7 @@ prefer.
 \appendix
 
 
-\chapter{RStudio Desktop}\label{rstudio-desktop}
+\chapter{Appendix -- RStudio Desktop}\label{appendix-rstudio-desktop}
 
 More advanced users of RStudio may be interested in using the RStudio
 Desktop version installed on their own computer instead of using the
@@ -647,8 +648,8 @@ Unless you plan to create PDF directly from R Markdown documents (which
 requires a multiple gigabyte download of LaTeX) you can skip some of the
 later steps of the installation.
 
-\section{\texorpdfstring{Downloading and installing
-\texttt{chemistr}}{Downloading and installing chemistr}}\label{downloading-and-installing-chemistr}
+\section{Downloading and installing
+chemistr}\label{downloading-and-installing-chemistr}
 
 I created the \texttt{chemistr} R package as a way to introduce students
 of Chem 101/102 at Reed College to R without the sometimes intimidating
@@ -697,10 +698,10 @@ templates
 \href{https://github.com/ismayc/chemistr/blob/master/NEWS.md}{here} with
 dates given.
 
-\chapter{Lab 1: Light (More Details)}\label{lab-1-light-more-details}
+\chapter{Appendix -- Lab 1: Light (More Details)}\label{appendix-light}
 
-\section{\texorpdfstring{\texttt{chem\_table}
-function}{chem\_table function}}\label{chem_table-function}
+\section{\texorpdfstring{The \texttt{chem\_table}
+function}{The chem\_table function}}\label{the-chem_table-function}
 
 The \texttt{chem\_table} function is essentially a wrapper function to
 the \texttt{pandoc.table} function in the \texttt{pander} package. Here
@@ -748,6 +749,10 @@ you might expect it to in the Word document:
   \texttt{split.tables} set to \texttt{Inf} ensures that wide tables
   will not be split into multiple tables
 \end{itemize}
+
+Lastly, the \texttt{cat("\textbackslash{}\textbackslash{}newline")} code
+specifies that an extra line of white space will be printed immediately
+following the table.
 
 \section{\texorpdfstring{The \texttt{include\_graphics}
 function}{The include\_graphics function}}\label{the-include_graphics-function}
