@@ -178,24 +178,24 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 Figure 1.1: Getting the Light R Markdown template
 </p>
 </div>
-<p>I’ve also created a new folder called <code>Lab1-Light</code> in my <code>CHEM101_ChesterIsmay</code> folder and named the resulting R Markdown file that was loaded in from the R Markdown template in <code>chemistr</code> the same thing: <code>Lab1-Light.Rmd</code>. You are highly encouraged to follow this same convention for all of your labs. (Note that as I mentioned earlier in this manual I do not have any spaces in the folder names or in the names of files here.) This will allow you to remember exactly where you stored the files and allow Danielle and I to easily find your files on the RStudio Server. Note that these folders were also created in the <code>CHEM101_ChesterIsmay</code> folder where the <code>Rproj</code> file resides. If you put your lab in the <code>Home</code> directory instead, Danielle and I won’t be able to access it since <code>Home</code> is the parent directory of <code>CHEM101_YourName</code>.</p>
+<p>I’ve also created a new folder called <code>Lab1-Light</code> in my <code>CHEM101_ChesterIsmay</code> folder and named the resulting R Markdown file that was loaded in from the R Markdown template in <code>chemistr</code> the same thing: <code>Lab1-Light.Rmd</code>. You are highly encouraged to follow this same convention for all of your labs. (Note that as I mentioned earlier in this manual I do not have any spaces in the folder names or in the names of files here.) This will allow you to remember exactly where you stored the files and allow Danielle and I to easily find your files on the RStudio Server. Note that this folder was also created in the <code>CHEM101_ChesterIsmay</code> folder where the <code>Rproj</code> file resides. If you put your lab in the <code>Home</code> directory instead, Danielle and I won’t be able to access it since <code>Home</code> is the parent directory of <code>CHEM101_YourName</code>.</p>
 </div>
 <div id="the-parts-of-the-lab-template" class="section level2">
 <h2><span class="header-section-number">1.2</span> The parts of the lab template</h2>
 <div id="the-yaml-header" class="section level3">
 <h3><span class="header-section-number">1.2.1</span> The YAML header</h3>
-<p>I’ve already entered some values into my R Markdown file. First I gave a title to the R Markdown file: “Lab 1 - Light”. I then entered my name and the current date. All of these are in quotation marks since they all correspond to character strings and not numbers. It will likely still work if you don’t put quotation marks around the entries here, but it is recommended that you use the quotation marks to help you understand the use of quotation marks when you begin working with R code.</p>
-<p>This portion of the R Markdown file is called the YAML header. It stores metadata about your document. It is separated by <code>---</code> before and <code>---</code> after. RStudio will warn you by coloring the <code>---</code> red if you accidentally do this.</p>
+<p>I’ve already entered some values into my R Markdown file. First I gave a title to the R Markdown file: “Lab 1 - Light”. I then entered my name and the current date. All of these are in quotation marks since they all correspond to character strings and not numbers. It will likely still work if you don’t put quotation marks around the entries here, but it is recommended that you use the quotation marks to help you understand the use of quotation marks when you begin working with R code. (R won’t be as nice as YAML is on forgetting quotation marks when they are needed.)</p>
+<p>This portion of the R Markdown file is called the YAML header. It stores metadata about your document. It is separated by <code>---</code> before and <code>---</code> after on their own lines. RStudio will warn you by coloring the <code>---</code> red if you accidentally add a space before them.</p>
 <p>The last line here corresponds to the type of output that will be produced. In this case, I’ve created a nice way for you to output this R Markdown file to a DOCX (Word document) format. The <code>chem_lab_word</code> document format in <code>chemistr</code> creates a Word document with figure captions enabled by default and images with size 3 inches in height and 6 inches in width by default.</p>
 </div>
 <div id="initial-r-chunk" class="section level3">
 <h3><span class="header-section-number">1.2.2</span> Initial R Chunk</h3>
-<p>On line 8 of the Light R Markdown template, you’ll see three backticks starting the line. This tells R Markdown to expect a block/chunk of code. This code is R code by the next designation <code>{r</code>. Next we give this R chunk a name <code>setup</code> and then specify chunk options immediately after the name and a comma. Here we have specified <code>include=FALSE</code>. This chunk option will run the R code when we press <strong>Knit</strong> button near the top of the code editor will not put the R code or its output into the document. We’ll press the <strong>Knit</strong> button in a bit to understand what it accomplishes.</p>
+<p>On line 8 of the Light R Markdown template, you’ll see three backticks starting the line. This tells R Markdown to expect a block/chunk of code. This code is R code by the next designation <code>{r</code>. Next we give this R chunk a name <code>setup</code> and then specify chunk options immediately after the name and a comma. Here we have specified <code>include=FALSE</code>. We then close the specifications for the chunk with a <code>}</code>. This <code>include=FALSE</code> chunk option will run the R code when we press <strong>Knit</strong> button near the top of the code editor will not put the R code or its output into the document. We’ll press the <strong>Knit</strong> button in a bit to understand what it accomplishes.</p>
 <p>You’ll see this <code>setup</code> chunk in all of the lab templates. It’s good practice to load any package you’ll need for your analysis at the top in a chunk like this. You may not initially understand why <code>chemistr</code> is needed but it will be needed when we create a table using the <code>chem_table</code> function, which resides in the <code>chemistr</code> package, in the <code>table</code> chunk beginning on line 21.</p>
 </div>
 <div id="headers" class="section level3">
 <h3><span class="header-section-number">1.2.3</span> Headers</h3>
-<p>Immediately below this first R chunk is two hash tags. This corresponds to creating a header in our resulting document. The font immediately following the hash-tags will be larger and act as a divider in our document. The number of hash-tags you enter corresponds to how large you’d like to make the header. One hash tag is the largest and six is the smallest. It is recommended that you use between one and three hash-tags for headers.</p>
+<p>Immediately below this first R chunk is two hash tags. This corresponds to creating a header in our resulting document. The font immediately following the hash-tags will be larger and act as a divider in our document. The number of hash-tags you enter corresponds to how large you’d like to make the header. One hash-tag is the largest and six is the smallest. It is recommended that you use between one and three hash-tags for headers.</p>
 </div>
 <div id="enter-data-chunk" class="section level3">
 <h3><span class="header-section-number">1.2.4</span> Enter data chunk</h3>
@@ -206,7 +206,7 @@ Figure 1.1: Getting the Light R Markdown template
 Figure 1.2: Initial Knit Error
 </p>
 </div>
-<p>Danielle has created lab templates that might not necessarily build without errors immediately for you. You should carefully read over the directions in each chunk (The comments after the <code>#</code> in the R chunks.) before pressing <strong>Knit</strong>. Here we see that the error occurs near line 15 of our file.</p>
+<p>Danielle has created lab templates that might not necessarily build without errors immediately for you. You should carefully read over the directions in each chunk (The comments after the <code>#</code> in the R chunks.) before pressing <strong>Knit</strong>. Here we see that the error occurs near line 15 of our R Markdown file.</p>
 <p>The <code>Color</code> and <code>WavelengthRange</code> vectors need to have some values entered. These results will correspond to what you observed in lab. I will enter some demo results in here and also show you how to use the R Console to check your results. You’ll see that the <code>Color</code> and <code>WavelengthRange</code> vectors must be of the same length when we create a <code>data_frame</code> to combine them together into “spreadsheet” format in the variable named <code>Q1_data</code>:</p>
 <div class="figure" style="text-align: center"><span id="fig:enterdata"></span>
 <img src="gifs/enter_data.gif" alt="Enter values for Color and WavelengthRange" width="\textwidth" />
@@ -214,33 +214,33 @@ Figure 1.2: Initial Knit Error
 Figure 1.3: Enter values for Color and WavelengthRange
 </p>
 </div>
-<p>You should use the R Console to check your results by either entering the R code line by line into the Console or by pressing the <strong>Run Current Chunk</strong> button (the green Play button). We see here that <code>Q1_data</code> is 6 rows by 2 columns and stores our results in “spreadsheet” form as a <code>data_frame</code>.</p>
+<p>You should use the R Console to check your results in the R chunks by either entering the R code line by line into the Console or by pressing the <strong>Run Current Chunk</strong> button (the green Play button). We see here that <code>Q1_data</code> is 6 rows by 2 columns and stores our results in “spreadsheet” form as a <code>data_frame</code>.</p>
 </div>
 <div id="a-nice-table-r-chunk" class="section level3">
 <h3><span class="header-section-number">1.2.5</span> A nice table R chunk</h3>
-<p>The <code>chem_table</code> function will result in a nicely formatted table being produced in your resulting Word document. You’ll need to specify a caption inside the parentheses instead of <code>&quot;A lovely caption for the table&quot;</code> default. You’ll also see that RStudio will create a second quotation mark when you might not want one. Carefully look over your document if you have errors and make sure there isn’t two quotation marks when you only wanted one. You’ll see this below:</p>
+<p>The <code>chem_table</code> function will result in a nicely formatted table being produced in your resulting Word document. You’ll need to specify a caption inside the parentheses instead of the <code>&quot;A lovely caption for the table&quot;</code> default. You’ll also see that RStudio will create a second quotation mark when you might not want one. Carefully look over your document if you have errors and make sure there isn’t two quotation marks when you only wanted one. You’ll see this below:</p>
 <div class="figure" style="text-align: center"><span id="fig:twoquotes"></span>
 <img src="gifs/two_quotes.gif" alt="Two quotation marks error" width="\textwidth" />
 <p class="caption">
 Figure 1.4: Two quotation marks error
 </p>
 </div>
-<p>After fixing our error, we have now created a DOCX file that will have our nice table showing the <code>Q1_data</code>. Feel free to open up this <code>Lab1_Light.docx</code> file now and see that the table was created with the caption “Light Source Table”. Feel free to enter a different caption instead.</p>
-<p>If you scroll down the R Markdown file, you’ll see that there are many more spots where we will be inserting pictures. R Markdown has nicely skipped over these chunks when we pressed <strong>Knit</strong> and we see that in the R Console window under the R Markdown tab.</p>
+<p>After fixing our error, we have now created a DOCX file that will have our nice table showing the <code>Q1_data</code>. Feel free to open up this <code>Lab1_Light.docx</code> file now and see that the table was created with the caption “Light Source Table”. You should probably enter a different and more specific caption instead though.</p>
+<p>If you scroll down the R Markdown file, you’ll see that there are many more spots where we will be inserting pictures. R Markdown has nicely skipped over these chunks when we pressed <strong>Knit</strong> instead of halting and giving lots of confusing errors and we see that in the R Console window under the R Markdown tab.</p>
 </div>
 </div>
 <div id="uploading-and-inserting-external-pictures" class="section level2">
 <h2><span class="header-section-number">1.3</span> Uploading and inserting external pictures</h2>
-<p>You’ll frequently be asked to add pictures into your lab reports that weren’t necessarily created using R. We will see how to include plots created inside R in later labs though. If you look over <strong>Q2</strong> in the lab it is asking you to include a picture of the “Absorbance spectrum of water in a 1 cm cuvette”. Note that this is specified as the figure caption here.</p>
-<p>Mathematical text is also included by surrounding the mathematical expression with dollar signs. This is using LaTeX to produce nicely formatted math text. Here we see the expression <span class="math inline">\(H_{2}0\)</span> is given using <code>$H_{2}0$</code>.</p>
-<p>In order to include a picture, you’ll need to first upload it to the RStudio Server into the directory where the R Markdown file is located. The GIF below shows you how to do so. Remember that you’ll need to know where you saved your image on your computer to specify it here. This example is done on a Mac but similar procedures should be done on a Linux or Windows machine.</p>
+<p>You’ll frequently be asked to add pictures into your lab reports that weren’t necessarily created using R. (We will see how to include plots created inside R in later labs though.) If you look over <strong>Q2</strong> in the lab it is asking you to include a picture of the “Absorbance spectrum of water in a 1 cm cuvette”. Note that this is specified as the figure caption here for the first R chunk after <strong>Q2</strong>.</p>
+<p>Mathematical text is also included by surrounding the mathematical expression with dollar signs. This is using LaTeX to produce nicely formatted math text. Here we see the expression <span class="math inline">\(H_{2}O\)</span> is given using <code>$H_{2}O$</code>.</p>
+<p>In order to include a picture, you’ll need to first upload it to the RStudio Server into the directory where the R Markdown file is located. The GIF below shows you how to do so. Remember that you’ll need to know where you saved your image on your computer to specify it here. This example GIF is recorded on a Mac but similar procedures should be done on a Linux or Windows machine.</p>
 <div class="figure" style="text-align: center"><span id="fig:uploadphoto"></span>
 <img src="gifs/upload_photo.gif" alt="Uploading a picture" width="\textwidth" />
 <p class="caption">
 Figure 1.5: Uploading a picture
 </p>
 </div>
-<p>The <code>Water.jpg</code> file has been uploaded to my <code>Lab1-Light</code> folder. The <code>include_graphics</code> function requires that you add the name of the file and its extension here. We now press the <strong>Knit</strong> button to see the resulting Word document:</p>
+<p>The <code>Water.jpg</code> file has been uploaded to my <code>Lab1-Light</code> folder on the RStudio Server. The <code>include_graphics</code> function requires that you add the name of the file and its extension here. We now press the <strong>Knit</strong> button to see the resulting Word document:</p>
 <div class="figure" style="text-align: center"><span id="fig:knitted"></span>
 <img src="gifs/knitted.gif" alt="Included photo and table in Word document" width="\textwidth" />
 <p class="caption">
@@ -249,7 +249,7 @@ Figure 1.6: Included photo and table in Word document
 </div>
 <div id="the-remainder-of-the-lab" class="section level3">
 <h3><span class="header-section-number">1.3.1</span> The remainder of the lab</h3>
-<p>In the remaining portions of the lab you’ll be asked to include other pictures from your lab sessions and also include a discussion of your results. This discussion will proceed in much the same way as you would add a discussion into a Word document or Google Doc. You’ll be able to immediately discuss what occurred in your R chunks immediately below them. This allows for the reader to easily follow your work.</p>
+<p>In the remaining portions of the lab you’ll be asked to include other pictures from your lab sessions and also include a discussion of your results. This discussion will proceed in much the same way as you would add a discussion into a Word document or Google Doc. You’ll be able to immediately discuss what occurred in your R chunks right below them. This allows for the reader to easily follow your work.</p>
 </div>
 </div>
 <div id="note-on-white-space" class="section level2">
@@ -265,7 +265,7 @@ Figure 1.6: Included photo and table in Word document
 </div>
 <div id="converting-your-word-document-to-pdf" class="section level2">
 <h2><span class="header-section-number">1.6</span> Converting your Word document to PDF</h2>
-<p>The directions for each lab on Moodle say to upload a PDF version of your lab. You’ll see how to create this PDF from inside Microsoft Word for Mac. A similar procedure can be done using OpenOffice (<a href="http://www.openoffice.org/download/" class="uri">http://www.openoffice.org/download/</a>) or Microsoft Word on a PC. You may also have the option to <strong>Save As</strong> a PDF there and you can get to this option by going to <strong>File -&gt; Save As -&gt; File Format: -&gt; PDF</strong> on the Mac if you prefer.</p>
+<p>The directions for each lab on Moodle say to upload a PDF version of your lab. You’ll see how to create this PDF from inside Microsoft Word for Mac. A similar procedure can be done using OpenOffice (<a href="http://www.openoffice.org/download/" class="uri">http://www.openoffice.org/download/</a>) on Linux, Mac, or Windows machines or Microsoft Word on a PC. You may also have the option to <strong>Save As</strong> a PDF there and you can get to this option by going to <strong>File -&gt; Save As -&gt; File Format: -&gt; PDF</strong> on the Mac if you prefer.</p>
 <div class="figure" style="text-align: center"><span id="fig:wordpdf"></span>
 <img src="gifs/word_pdf.gif" alt="Save as PDF on Mac from Microsoft Word" width="\textwidth" />
 <p class="caption">

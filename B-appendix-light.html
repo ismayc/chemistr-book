@@ -184,19 +184,19 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li><code>caption</code> is the caption we’d like to correspond to this table</li>
 </ul>
 <p>Remember that you can run <code>?chemistr::chem_table</code> to bring up the help documentation for the function.</p>
-<p>We first use the <code>pandoc.strong.return</code> function that bolds the column names. We then call the <code>pandoc.table</code> function in the <code>pander</code> package with <code>data</code> as our argument and then our entered <code>caption</code> argument as the <code>caption</code> argument to <code>pandoc.table</code>. The last two argument for <code>style</code> and <code>split.tables</code> are used to ensure the outputted table appears as you might expect it to in the Word document:</p>
+<p>We first use the <code>pandoc.strong.return</code> function that bolds the column names. We then call the <code>pandoc.table</code> function in the <code>pander</code> package with <code>data</code> as our argument and then our entered <code>caption</code> parameter as the <code>caption</code> argument to <code>pandoc.table</code>. The last two argument for <code>style</code> and <code>split.tables</code> are used to ensure the outputted table appears as you might expect it to in the Word document:</p>
 <ul>
 <li><p><code>style</code> set to <code>multiline</code> allow headers and table rows to span multiple lines of text. This may be helpful if you have long column names.</p></li>
-<li><p><code>split.tables</code> set to <code>Inf</code> ensures that wide tables will not be split into multiple tables</p></li>
+<li><p><code>split.tables</code> set to <code>Inf</code> ensures that wide tables will not be split into multiple tables.</p></li>
 </ul>
 <p>Lastly, the <code>cat(&quot;\\newline&quot;)</code> code specifies that an extra line of white space will be printed immediately following the table.</p>
 </div>
 <div id="the-include_graphics-function" class="section level2">
 <h2><span class="header-section-number">B.2</span> The <code>include_graphics</code> function</h2>
 <p>The <code>include_graphics</code> function enables you to include pictures that are stored as image files (<code>*.png</code> or <code>*.jpg</code>, for example) into your Word document via R Markdown. It is a function in the <code>knitr</code> package. If you’d like more information on how to use <code>include_graphics</code> run <code>?knitr::include_graphics</code> in the R Console. The important argument here is <code>path</code> which tells R where to look for the file you want to include.</p>
-<p>If you include your pictures in the same directory as your Rmd file you need only specify the name of the file here. If you have a <code>figure</code> folder in the same folder as your R Markdown file, you’ll need to specify that in something like:</p>
+<p>If you include your pictures in the same directory as your Rmd file you need only specify the name of the file here in quotation marks. If you have a <code>figure</code> folder in the same folder as your R Markdown file, you’ll need to specify that via something like:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">knitr::<span class="kw">include_graphics</span>(<span class="st">&quot;figure/myimage.png&quot;</span>)</code></pre></div>
-<p>Whatever you specify as the chunk option <code>fig.cap</code> will appear as the figure caption. You are also encouraged to name the R chunk, which will allow you to reference the figure later in your document:</p>
+<p>Whatever you specify as the chunk option <code>fig.cap</code> will appear as the figure caption. You are also encouraged to name the R chunk, which will allow you to reference the figure later in your document as well as automatic numbering of the figures:</p>
 <p><code>```{r myimage, echo=FALSE, fig.cap=&quot;Here is my picture&quot;}</code></p>
 <p><code>knitr::include_graphics(&quot;figure/myimage.png&quot;)</code></p>
 <p><code>```</code></p>

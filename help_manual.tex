@@ -371,7 +371,7 @@ RStudio project is. We are happy to help you learn how to use R!
 \addcontentsline{toc}{subsection}{Book was last updated:}
 
 \begin{verbatim}
-## [1] "By Chester on Sunday, September 04, 2016 17:57:53 PDT"
+## [1] "By Chester on Sunday, September 04, 2016 18:20:59 PDT"
 \end{verbatim}
 
 \chapter{Lab 1: Light}\label{light}
@@ -396,11 +396,11 @@ highly encouraged to follow this same convention for all of your labs.
 spaces in the folder names or in the names of files here.) This will
 allow you to remember exactly where you stored the files and allow
 Danielle and I to easily find your files on the RStudio Server. Note
-that these folders were also created in the
-\texttt{CHEM101\_ChesterIsmay} folder where the \texttt{Rproj} file
-resides. If you put your lab in the \texttt{Home} directory instead,
-Danielle and I won't be able to access it since \texttt{Home} is the
-parent directory of \texttt{CHEM101\_YourName}.
+that this folder was also created in the \texttt{CHEM101\_ChesterIsmay}
+folder where the \texttt{Rproj} file resides. If you put your lab in the
+\texttt{Home} directory instead, Danielle and I won't be able to access
+it since \texttt{Home} is the parent directory of
+\texttt{CHEM101\_YourName}.
 
 \section{The parts of the lab
 template}\label{the-parts-of-the-lab-template}
@@ -413,12 +413,14 @@ and the current date. All of these are in quotation marks since they all
 correspond to character strings and not numbers. It will likely still
 work if you don't put quotation marks around the entries here, but it is
 recommended that you use the quotation marks to help you understand the
-use of quotation marks when you begin working with R code.
+use of quotation marks when you begin working with R code. (R won't be
+as nice as YAML is on forgetting quotation marks when they are needed.)
 
 This portion of the R Markdown file is called the YAML header. It stores
 metadata about your document. It is separated by \texttt{-\/-\/-} before
-and \texttt{-\/-\/-} after. RStudio will warn you by coloring the
-\texttt{-\/-\/-} red if you accidentally do this.
+and \texttt{-\/-\/-} after on their own lines. RStudio will warn you by
+coloring the \texttt{-\/-\/-} red if you accidentally add a space before
+them.
 
 The last line here corresponds to the type of output that will be
 produced. In this case, I've created a nice way for you to output this R
@@ -434,10 +436,12 @@ starting the line. This tells R Markdown to expect a block/chunk of
 code. This code is R code by the next designation \texttt{\{r}. Next we
 give this R chunk a name \texttt{setup} and then specify chunk options
 immediately after the name and a comma. Here we have specified
-\texttt{include=FALSE}. This chunk option will run the R code when we
-press \textbf{Knit} button near the top of the code editor will not put
-the R code or its output into the document. We'll press the
-\textbf{Knit} button in a bit to understand what it accomplishes.
+\texttt{include=FALSE}. We then close the specifications for the chunk
+with a \texttt{\}}. This \texttt{include=FALSE} chunk option will run
+the R code when we press \textbf{Knit} button near the top of the code
+editor will not put the R code or its output into the document. We'll
+press the \textbf{Knit} button in a bit to understand what it
+accomplishes.
 
 You'll see this \texttt{setup} chunk in all of the lab templates. It's
 good practice to load any package you'll need for your analysis at the
@@ -453,7 +457,7 @@ Immediately below this first R chunk is two hash tags. This corresponds
 to creating a header in our resulting document. The font immediately
 following the hash-tags will be larger and act as a divider in our
 document. The number of hash-tags you enter corresponds to how large
-you'd like to make the header. One hash tag is the largest and six is
+you'd like to make the header. One hash-tag is the largest and six is
 the smallest. It is recommended that you use between one and three
 hash-tags for headers.
 
@@ -472,7 +476,7 @@ Danielle has created lab templates that might not necessarily build
 without errors immediately for you. You should carefully read over the
 directions in each chunk (The comments after the \texttt{\#} in the R
 chunks.) before pressing \textbf{Knit}. Here we see that the error
-occurs near line 15 of our file.
+occurs near line 15 of our R Markdown file.
 
 The \texttt{Color} and \texttt{WavelengthRange} vectors need to have
 some values entered. These results will correspond to what you observed
@@ -488,17 +492,17 @@ into ``spreadsheet'' format in the variable named \texttt{Q1\_data}:
 
 \vspace{0.1in}
 
-You should use the R Console to check your results by either entering
-the R code line by line into the Console or by pressing the \textbf{Run
-Current Chunk} button (the green Play button). We see here that
-\texttt{Q1\_data} is 6 rows by 2 columns and stores our results in
-``spreadsheet'' form as a \texttt{data\_frame}.
+You should use the R Console to check your results in the R chunks by
+either entering the R code line by line into the Console or by pressing
+the \textbf{Run Current Chunk} button (the green Play button). We see
+here that \texttt{Q1\_data} is 6 rows by 2 columns and stores our
+results in ``spreadsheet'' form as a \texttt{data\_frame}.
 
 \subsection{A nice table R chunk}\label{a-nice-table-r-chunk}
 
 The \texttt{chem\_table} function will result in a nicely formatted
 table being produced in your resulting Word document. You'll need to
-specify a caption inside the parentheses instead of
+specify a caption inside the parentheses instead of the
 \texttt{"A\ lovely\ caption\ for\ the\ table"} default. You'll also see
 that RStudio will create a second quotation mark when you might not want
 one. Carefully look over your document if you have errors and make sure
@@ -514,35 +518,36 @@ this below:
 After fixing our error, we have now created a DOCX file that will have
 our nice table showing the \texttt{Q1\_data}. Feel free to open up this
 \texttt{Lab1\_Light.docx} file now and see that the table was created
-with the caption ``Light Source Table''. Feel free to enter a different
-caption instead.
+with the caption ``Light Source Table''. You should probably enter a
+different and more specific caption instead though.
 
 If you scroll down the R Markdown file, you'll see that there are many
 more spots where we will be inserting pictures. R Markdown has nicely
-skipped over these chunks when we pressed \textbf{Knit} and we see that
-in the R Console window under the R Markdown tab.
+skipped over these chunks when we pressed \textbf{Knit} instead of
+halting and giving lots of confusing errors and we see that in the R
+Console window under the R Markdown tab.
 
 \section{Uploading and inserting external
 pictures}\label{uploading-and-inserting-external-pictures}
 
 You'll frequently be asked to add pictures into your lab reports that
-weren't necessarily created using R. We will see how to include plots
-created inside R in later labs though. If you look over \textbf{Q2} in
+weren't necessarily created using R. (We will see how to include plots
+created inside R in later labs though.) If you look over \textbf{Q2} in
 the lab it is asking you to include a picture of the ``Absorbance
 spectrum of water in a 1 cm cuvette''. Note that this is specified as
-the figure caption here.
+the figure caption here for the first R chunk after \textbf{Q2}.
 
 Mathematical text is also included by surrounding the mathematical
 expression with dollar signs. This is using LaTeX to produce nicely
-formatted math text. Here we see the expression \(H_{2}0\) is given
-using \texttt{\$H\_\{2\}0\$}.
+formatted math text. Here we see the expression \(H_{2}O\) is given
+using \texttt{\$H\_\{2\}O\$}.
 
 In order to include a picture, you'll need to first upload it to the
 RStudio Server into the directory where the R Markdown file is located.
 The GIF below shows you how to do so. Remember that you'll need to know
 where you saved your image on your computer to specify it here. This
-example is done on a Mac but similar procedures should be done on a
-Linux or Windows machine.
+example GIF is recorded on a Mac but similar procedures should be done
+on a Linux or Windows machine.
 
 \vspace{0.1in}
 
@@ -551,9 +556,9 @@ Linux or Windows machine.
 \vspace{0.1in}
 
 The \texttt{Water.jpg} file has been uploaded to my \texttt{Lab1-Light}
-folder. The \texttt{include\_graphics} function requires that you add
-the name of the file and its extension here. We now press the
-\textbf{Knit} button to see the resulting Word document:
+folder on the RStudio Server. The \texttt{include\_graphics} function
+requires that you add the name of the file and its extension here. We
+now press the \textbf{Knit} button to see the resulting Word document:
 
 \vspace{0.1in}
 
@@ -567,8 +572,8 @@ In the remaining portions of the lab you'll be asked to include other
 pictures from your lab sessions and also include a discussion of your
 results. This discussion will proceed in much the same way as you would
 add a discussion into a Word document or Google Doc. You'll be able to
-immediately discuss what occurred in your R chunks immediately below
-them. This allows for the reader to easily follow your work.
+immediately discuss what occurred in your R chunks right below them.
+This allows for the reader to easily follow your work.
 
 \section{Note on white space}\label{note-on-white-space}
 
@@ -598,11 +603,11 @@ PDF}\label{converting-your-word-document-to-pdf}
 The directions for each lab on Moodle say to upload a PDF version of
 your lab. You'll see how to create this PDF from inside Microsoft Word
 for Mac. A similar procedure can be done using OpenOffice
-(\url{http://www.openoffice.org/download/}) or Microsoft Word on a PC.
-You may also have the option to \textbf{Save As} a PDF there and you can
-get to this option by going to \textbf{File -\textgreater{} Save As
--\textgreater{} File Format: -\textgreater{} PDF} on the Mac if you
-prefer.
+(\url{http://www.openoffice.org/download/}) on Linux, Mac, or Windows
+machines or Microsoft Word on a PC. You may also have the option to
+\textbf{Save As} a PDF there and you can get to this option by going to
+\textbf{File -\textgreater{} Save As -\textgreater{} File Format:
+-\textgreater{} PDF} on the Mac if you prefer.
 
 \vspace{0.1in}
 
@@ -617,14 +622,14 @@ prefer.
 
 More advanced users of RStudio may be interested in using the RStudio
 Desktop version installed on their own computer instead of using the
-server. It is encouraged that all students do this after they have some
-familiarity with how RStudio works. The RStudio Server is a great way to
-learn how this works while providing the ability for more advanced users
-to give support to learning through Shared Projects. Downloading the
-RStudio Desktop allows for resources to be freed up on the RStudio
-Server though and if you are performing more advanced calculations it
-makes more sense to download your own version of RStudio instead of
-doing so on the RStudio Server.
+RStudio Server. It is encouraged that all students do this after they
+have some familiarity with how RStudio works. The RStudio Server is a
+great way to learn how this works while providing the ability for more
+advanced users to give support to learning through Shared Projects.
+Downloading the RStudio Desktop allows for resources to be freed up on
+the RStudio Server though and if you are performing more advanced
+calculations it makes more sense to download your own version of RStudio
+instead of running them on the RStudio Server.
 
 \section{Downloading R and RStudio
 Desktop}\label{downloading-r-and-rstudio-desktop}
@@ -644,9 +649,11 @@ can be found
   for a PC.
 \end{itemize}
 
+The process is a little more complicated for Linux machines, but
+Googling ``RStudio for Linux'' wil likely lead you to some instructions.
 Unless you plan to create PDF directly from R Markdown documents (which
 requires a multiple gigabyte download of LaTeX) you can skip some of the
-later steps of the installation.
+later steps of the installation guidelines.
 
 \section{Downloading and installing
 chemistr}\label{downloading-and-installing-chemistr}
@@ -663,7 +670,8 @@ standard for R packages and, to be on CRAN, packages there go through a
 series of tests to make sure they are working well. With the
 \texttt{chemistr} package being developed recently (and still under
 development), it does not currently reside on CRAN. But you can still
-download a developmental version of it.
+download a developmental version of it onto your machine running RStudio
+Desktop.
 
 \href{http://hadley.nz/}{Hadley Wickham} has created an R package called
 \texttt{devtools} that allows for R packages to be more easily created
@@ -735,7 +743,7 @@ the help documentation for the function.
 We first use the \texttt{pandoc.strong.return} function that bolds the
 column names. We then call the \texttt{pandoc.table} function in the
 \texttt{pander} package with \texttt{data} as our argument and then our
-entered \texttt{caption} argument as the \texttt{caption} argument to
+entered \texttt{caption} parameter as the \texttt{caption} argument to
 \texttt{pandoc.table}. The last two argument for \texttt{style} and
 \texttt{split.tables} are used to ensure the outputted table appears as
 you might expect it to in the Word document:
@@ -747,7 +755,7 @@ you might expect it to in the Word document:
   column names.
 \item
   \texttt{split.tables} set to \texttt{Inf} ensures that wide tables
-  will not be split into multiple tables
+  will not be split into multiple tables.
 \end{itemize}
 
 Lastly, the \texttt{cat("\textbackslash{}\textbackslash{}newline")} code
@@ -766,9 +774,9 @@ R Console. The important argument here is \texttt{path} which tells R
 where to look for the file you want to include.
 
 If you include your pictures in the same directory as your Rmd file you
-need only specify the name of the file here. If you have a
-\texttt{figure} folder in the same folder as your R Markdown file,
-you'll need to specify that in something like:
+need only specify the name of the file here in quotation marks. If you
+have a \texttt{figure} folder in the same folder as your R Markdown
+file, you'll need to specify that via something like:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -778,7 +786,8 @@ you'll need to specify that in something like:
 
 Whatever you specify as the chunk option \texttt{fig.cap} will appear as
 the figure caption. You are also encouraged to name the R chunk, which
-will allow you to reference the figure later in your document:
+will allow you to reference the figure later in your document as well as
+automatic numbering of the figures:
 
 \texttt{```\{r\ myimage,\ echo=FALSE,\ fig.cap="Here\ is\ my\ picture"\}}
 
