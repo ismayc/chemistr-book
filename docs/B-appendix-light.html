@@ -8,7 +8,7 @@
   <title>LeaRning R in ChemistRy at Reed College</title>
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="A help manual for working with RStudio and R Markdown in completing labs for Chem 101/102 at Reed College">
-  <meta name="generator" content="bookdown 0.1.7 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.1 and GitBook 2.6.7">
 
   <meta property="og:title" content="LeaRning R in ChemistRy at Reed College" />
   <meta property="og:type" content="book" />
@@ -25,7 +25,7 @@
 
 <meta name="author" content="Chester Ismay">
 
-<meta name="date" content="2016-09-04">
+<meta name="date" content="2016-09-08">
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -38,8 +38,8 @@ MathJax.Hub.Config({
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
-<link rel="prev" href="1-light.html">
-<link rel="next" href="B-appendix-light.html">
+<link rel="prev" href="A-appendix-rstudio-desktop.html">
+<link rel="next" href="references.html">
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -167,30 +167,40 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="appendix-rstudio-desktop" class="section level1">
-<h1><span class="header-section-number">A</span> Appendix – RStudio Desktop</h1>
-<p>More advanced users of RStudio may be interested in using the RStudio Desktop version installed on their own computer instead of using the RStudio Server. It is encouraged that all students do this after they have some familiarity with how RStudio works. The RStudio Server is a great way to learn how this works while providing the ability for more advanced users to give support to learning through Shared Projects. Downloading the RStudio Desktop allows for resources to be freed up on the RStudio Server though and if you are performing more advanced calculations it makes more sense to download your own version of RStudio instead of running them on the RStudio Server.</p>
-<div id="downloading-r-and-rstudio-desktop" class="section level2">
-<h2><span class="header-section-number">A.1</span> Downloading R and RStudio Desktop</h2>
-<p>It is worth noting that you can’t just install RStudio Desktop without installing R as RStudio needs to have R installed in order to run. A step-by-step guide to installing R and RStudio Desktop with screenshots can be found</p>
+<div id="appendix-light" class="section level1">
+<h1><span class="header-section-number">B</span> Appendix – Lab 1: Light (More Details)</h1>
+<div id="the-chem_table-function" class="section level2">
+<h2><span class="header-section-number">B.1</span> The <code>chem_table</code> function</h2>
+<p>The <code>chem_table</code> function is essentially a wrapper function to the <code>pandoc.table</code> function in the <code>pander</code> package. Here is the code for <code>chem_table</code>:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">chem_table &lt;-<span class="st"> </span>function(data, caption){
+  <span class="kw">names</span>(data) &lt;-<span class="st"> </span><span class="kw">pandoc.strong.return</span>(<span class="kw">names</span>(data))
+  <span class="kw">pandoc.table</span>(data, <span class="dt">caption =</span> caption, <span class="dt">style =</span> <span class="st">&quot;multiline&quot;</span>,
+               <span class="dt">split.tables =</span> <span class="ot">Inf</span>)
+  <span class="kw">cat</span>(<span class="st">&quot;</span><span class="ch">\\</span><span class="st">newline&quot;</span>)
+}</code></pre></div>
+<p>We see here that <code>chem_table</code> expects two arguments:</p>
 <ul>
-<li><a href="http://www.reed.edu/data-at-reed/software/R/r_studio.html">here</a> for the Mac and</li>
-<li><a href="http://www.reed.edu/data-at-reed/software/R/r_studio_pc.html">here</a> for a PC.</li>
+<li><code>data</code> is a data frame containing the variables you’d like to appear in the table</li>
+<li><code>caption</code> is the caption we’d like to correspond to this table</li>
 </ul>
-<p>The process is a little more complicated for Linux machines, but Googling “RStudio for Linux” wil likely lead you to some instructions. Unless you plan to create PDF directly from R Markdown documents (which requires a multiple gigabyte download of LaTeX) you can skip some of the later steps of the installation guidelines.</p>
+<p>Remember that you can run <code>?chemistr::chem_table</code> to bring up the help documentation for the function.</p>
+<p>We first use the <code>pandoc.strong.return</code> function that bolds the column names. We then call the <code>pandoc.table</code> function in the <code>pander</code> package with <code>data</code> as our argument and then our entered <code>caption</code> parameter as the <code>caption</code> argument to <code>pandoc.table</code>. The last two argument for <code>style</code> and <code>split.tables</code> are used to ensure the outputted table appears as you might expect it to in the Word document:</p>
+<ul>
+<li><p><code>style</code> set to <code>multiline</code> allow headers and table rows to span multiple lines of text. This may be helpful if you have long column names.</p></li>
+<li><p><code>split.tables</code> set to <code>Inf</code> ensures that wide tables will not be split into multiple tables.</p></li>
+</ul>
+<p>Lastly, the <code>cat(&quot;\\newline&quot;)</code> code specifies that an extra line of white space will be printed immediately following the table.</p>
 </div>
-<div id="downloading-and-installing-chemistr" class="section level2">
-<h2><span class="header-section-number">A.2</span> Downloading and installing chemistr</h2>
-<p>I created the <code>chemistr</code> R package as a way to introduce students of Chem 101/102 at Reed College to R without the sometimes intimidating amounts of code needed to produce specific plots and tables. The package also includes R Markdown lab report templates for each of the labs.</p>
-<p>Intermediate users of R and RStudio may be used to using the <code>install.packages</code> function to download and install R packages from CRAN (The Comprehensive R Archive Network). This network is the standard for R packages and, to be on CRAN, packages there go through a series of tests to make sure they are working well. With the <code>chemistr</code> package being developed recently (and still under development), it does not currently reside on CRAN. But you can still download a developmental version of it onto your machine running RStudio Desktop.</p>
-<p><a href="http://hadley.nz/">Hadley Wickham</a> has created an R package called <code>devtools</code> that allows for R packages to be more easily created and shared with others. We will use this package to install the <code>chemistr</code> package from my GitHub page. You’ll need to enter these commands into the R Console of your RStudio Desktop:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;devtools&quot;</span>)
-devtools::<span class="kw">install_github</span>(<span class="st">&quot;ismayc/chemistr&quot;</span>)</code></pre></div>
-<p>After running these two commands you can check that <code>chemistr</code> was installed correctly by entering <code>library(chemistr)</code> into the R Console. If you get back to <code>&gt;</code> without any error messages, you should be good to go. Now you’ll follow the same steps given in each chapter of this book to get the R Markdown template for that specific lab.</p>
-<blockquote>
-<p><strong>File</strong> -&gt; <strong>New File</strong> -&gt; <strong>R Markdown</strong> -&gt; <strong>From Template</strong> -&gt; NameOfLab</p>
-</blockquote>
-<p>You are encouraged to run the two lines of code above before you begin each lab as there may have been slight corrections/changes made to the lab templates. You can find a description of each change to the lab templates <a href="https://github.com/ismayc/chemistr/blob/master/NEWS.md">here</a> with dates given.</p>
+<div id="the-include_graphics-function" class="section level2">
+<h2><span class="header-section-number">B.2</span> The <code>include_graphics</code> function</h2>
+<p>The <code>include_graphics</code> function enables you to include pictures that are stored as image files (<code>*.png</code> or <code>*.jpg</code>, for example) into your Word document via R Markdown. It is a function in the <code>knitr</code> package. If you’d like more information on how to use <code>include_graphics</code> run <code>?knitr::include_graphics</code> in the R Console. The important argument here is <code>path</code> which tells R where to look for the file you want to include.</p>
+<p>If you include your pictures in the same directory as your Rmd file you need only specify the name of the file here in quotation marks. If you have a <code>figure</code> folder in the same folder as your R Markdown file, you’ll need to specify that via something like:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">knitr::<span class="kw">include_graphics</span>(<span class="st">&quot;figure/myimage.png&quot;</span>)</code></pre></div>
+<p>Whatever you specify as the chunk option <code>fig.cap</code> will appear as the figure caption. You are also encouraged to name the R chunk, which will allow you to reference the figure later in your document as well as automatic numbering of the figures:</p>
+<p><code>```{r myimage, echo=FALSE, fig.cap=&quot;Here is my picture&quot;}</code></p>
+<p><code>knitr::include_graphics(&quot;figure/myimage.png&quot;)</code></p>
+<p><code>```</code></p>
+<p>We could then reference our picture in the text of our document by using <code>\@ref(fig:myimage)</code>.</p>
 
 </div>
 </div>
@@ -199,8 +209,8 @@ devtools::<span class="kw">install_github</span>(<span class="st">&quot;ismayc/c
           </div>
         </div>
       </div>
-<a href="1-light.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="B-appendix-light.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+<a href="A-appendix-rstudio-desktop.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
 
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
@@ -227,7 +237,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/ismayc/chemistr-book-source/edit/master/90-rstudio_desktop.Rmd",
+"link": "https://github.com/ismayc/chemistr-book-source/edit/master/91-light.Rmd",
 "text": null
 },
 "download": ["help_manual.pdf"],

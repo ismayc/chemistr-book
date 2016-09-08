@@ -1,0 +1,35 @@
+# (APPENDIX) Appendix {-}
+
+# Appendix -- RStudio Desktop
+
+More advanced users of RStudio may be interested in using the RStudio Desktop version installed on their own computer instead of using the RStudio Server.  It is encouraged that all students do this after they have some familiarity with how RStudio works.  The RStudio Server is a great way to learn how this works while providing the ability for more advanced users to give support to learning through Shared Projects.  Downloading the RStudio Desktop allows for resources to be freed up on the RStudio Server though and if you are performing more advanced calculations it makes more sense to download your own version of RStudio instead of running them on the RStudio Server.
+
+## Downloading R and RStudio Desktop
+
+It is worth noting that you can't just install RStudio Desktop without installing R as RStudio needs to have R installed in order to run.  A step-by-step guide to installing R and RStudio Desktop with screenshots can be found
+
+- [here](http://www.reed.edu/data-at-reed/software/R/r_studio.html) for the Mac and
+- [here](http://www.reed.edu/data-at-reed/software/R/r_studio_pc.html) for a PC.
+
+The process is a little more complicated for Linux machines, but Googling "RStudio for Linux" wil likely lead you to some instructions.  Unless you plan to create PDF directly from R Markdown documents (which requires a multiple gigabyte download of LaTeX) you can skip some of the later steps of the installation guidelines.
+
+## Downloading and installing chemistr
+
+I created the `chemistr` R package as a way to introduce students of Chem 101/102 at Reed College to R without the sometimes intimidating amounts of code needed to produce specific plots and tables.  The package also includes R Markdown lab report templates for each of the labs.  
+
+Intermediate users of R and RStudio may be used to using the `install.packages` function to download and install R packages from CRAN (The Comprehensive R Archive Network).  This network is the standard for R packages and, to be on CRAN, packages there go through a series of tests to make sure they are working well.  With the `chemistr` package being developed recently (and still under development), it does not currently reside on CRAN.  But you can still download a developmental version of it onto your machine running RStudio Desktop.
+
+[Hadley Wickham](http://hadley.nz/) has created an R package called `devtools` that allows for R packages to be more easily created and shared with others.  We will use this package to install the `chemistr` package from my GitHub page.  You'll need to enter these commands into the R Console of your RStudio Desktop:
+
+```{r eval=FALSE}
+install.packages("devtools")
+devtools::install_github("ismayc/chemistr")
+```
+
+After running these two commands you can check that `chemistr` was installed correctly by entering `library(chemistr)` into the R Console.  If you get back to `>` without any error messages, you should be good to go.  Now you'll follow the same steps given in each chapter of this book to get the R Markdown template for that specific lab.  
+
+> **File** -> **New File** -> **R Markdown** -> **From Template** -> NameOfLab
+
+You are encouraged to run the two lines of code above before you begin each lab as there may have been slight corrections/changes made to the lab templates.  You can find a description of each change to the lab templates [here](https://github.com/ismayc/chemistr/blob/master/NEWS.md) with dates given.
+
+

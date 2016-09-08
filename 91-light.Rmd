@@ -1,0 +1,51 @@
+# Appendix -- Lab 1: Light (More Details) {#appendix-light}
+
+## The `chem_table` function
+
+The `chem_table` function is essentially a wrapper function to the `pandoc.table` function in the `pander` package.  Here is the code for `chem_table`:
+
+```{r eval=FALSE}
+chem_table <- function(data, caption){
+  names(data) <- pandoc.strong.return(names(data))
+  pandoc.table(data, caption = caption, style = "multiline",
+               split.tables = Inf)
+  cat("\\newline")
+}
+```
+
+We see here that `chem_table` expects two arguments:
+
+- `data` is a data frame containing the variables you'd like to appear in the table
+- `caption` is the caption we'd like to correspond to this table
+
+Remember that you can run `?chemistr::chem_table` to bring up the help documentation for the function.
+
+We first use the `pandoc.strong.return` function that bolds the column names.  We then
+call the `pandoc.table` function in the `pander` package with `data` as our argument and then our entered `caption` parameter as the `caption` argument to `pandoc.table`. The last two argument for `style` and `split.tables` are used to ensure the outputted table appears as you might expect it to in the Word document: 
+
+- `style` set to `multiline` allow headers and table rows to span multiple lines of text.  This may be helpful if you have long column names.
+
+- `split.tables` set to `Inf` ensures that wide tables will not be split into multiple tables.
+
+Lastly, the `cat("\\newline")` code specifies that an extra line of white space will be printed immediately following the table.
+
+## The `include_graphics` function
+
+The `include_graphics` function enables you to include pictures that are stored as image files (`*.png` or `*.jpg`, for example) into your Word document via R Markdown.  It is a function in the `knitr` package.  If you'd like more information on how to use `include_graphics` run `?knitr::include_graphics` in the R Console.  The important argument here is `path` which tells R where to look for the file you want to include.  
+
+If you include your pictures in the same directory as your Rmd file you need only specify the name of the file here in quotation marks.  If you have a `figure` folder in the same folder as your R Markdown file, you'll need to specify that via something like:
+
+```{r eval=FALSE}
+knitr::include_graphics("figure/myimage.png")
+```
+
+Whatever you specify as the chunk option `fig.cap` will appear as the figure caption.  You are also encouraged to name the R chunk, which will allow you to reference the figure later in your document as well as automatic numbering of the figures:
+
+` ```{r myimage, echo=FALSE, fig.cap="Here is my picture"} `
+
+`knitr::include_graphics("figure/myimage.png")`
+
+` ``` `
+
+We could then reference our picture in the text of our document by using `\@ref(fig:myimage)`.
+
