@@ -25,7 +25,7 @@
 
 <meta name="author" content="Chester Ismay">
 
-<meta name="date" content="2016-09-08">
+<meta name="date" content="2016-09-11">
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -39,7 +39,7 @@ MathJax.Hub.Config({
   
   
 <link rel="prev" href="index.html">
-<link rel="next" href="A-appendix-rstudio-desktop.html">
+<link rel="next" href="A-rstudio-desktop.html">
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -136,18 +136,18 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="1.6" data-path="1-light.html"><a href="1-light.html#converting-your-word-document-to-pdf"><i class="fa fa-check"></i><b>1.6</b> Converting your Word document to PDF</a></li>
 </ul></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
-<li class="chapter" data-level="A" data-path="A-appendix-rstudio-desktop.html"><a href="A-appendix-rstudio-desktop.html"><i class="fa fa-check"></i><b>A</b> Appendix – RStudio Desktop</a><ul>
-<li class="chapter" data-level="A.1" data-path="A-appendix-rstudio-desktop.html"><a href="A-appendix-rstudio-desktop.html#downloading-r-and-rstudio-desktop"><i class="fa fa-check"></i><b>A.1</b> Downloading R and RStudio Desktop</a></li>
-<li class="chapter" data-level="A.2" data-path="A-appendix-rstudio-desktop.html"><a href="A-appendix-rstudio-desktop.html#downloading-and-installing-chemistr"><i class="fa fa-check"></i><b>A.2</b> Downloading and installing chemistr</a></li>
+<li class="chapter" data-level="A" data-path="A-rstudio-desktop.html"><a href="A-rstudio-desktop.html"><i class="fa fa-check"></i><b>A</b> RStudio Desktop</a><ul>
+<li class="chapter" data-level="A.1" data-path="A-rstudio-desktop.html"><a href="A-rstudio-desktop.html#downloading-r-and-rstudio-desktop"><i class="fa fa-check"></i><b>A.1</b> Downloading R and RStudio Desktop</a></li>
+<li class="chapter" data-level="A.2" data-path="A-rstudio-desktop.html"><a href="A-rstudio-desktop.html#downloading-and-installing-chemistr"><i class="fa fa-check"></i><b>A.2</b> Downloading and installing chemistr</a></li>
 </ul></li>
-<li class="chapter" data-level="B" data-path="B-appendix-light.html"><a href="B-appendix-light.html"><i class="fa fa-check"></i><b>B</b> Appendix – Lab 1: Light (More Details)</a><ul>
+<li class="chapter" data-level="B" data-path="B-appendix-light.html"><a href="B-appendix-light.html"><i class="fa fa-check"></i><b>B</b> Lab 1: Light (More Details)</a><ul>
 <li class="chapter" data-level="B.1" data-path="B-appendix-light.html"><a href="B-appendix-light.html#the-chem_table-function"><i class="fa fa-check"></i><b>B.1</b> The <code>chem_table</code> function</a></li>
 <li class="chapter" data-level="B.2" data-path="B-appendix-light.html"><a href="B-appendix-light.html#the-include_graphics-function"><i class="fa fa-check"></i><b>B.2</b> The <code>include_graphics</code> function</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-<li><a href="https://github.com/ismayc/chemistr-book-source/issues" target="blank">Create a GitHub Issue</a></li>
+<li><a href="https://github.com/ismayc/chemistr-book/issues" target="blank">Create a GitHub Issue</a></li>
 <li><a href="mailto:chester.ismay@gmail.com" target="blank">Email Chester</a></li>
 
 </ul>
@@ -186,6 +186,12 @@ Figure 1.1: Getting the Light R Markdown template
 <h3><span class="header-section-number">1.2.1</span> The YAML header</h3>
 <p>I’ve already entered some values into my R Markdown file. First I gave a title to the R Markdown file: “Lab 1 - Light”. I then entered my name and the current date. All of these are in quotation marks since they all correspond to character strings and not numbers. It will likely still work if you don’t put quotation marks around the entries here, but it is recommended that you use the quotation marks to help you understand the use of quotation marks when you begin working with R code. (R won’t be as nice as YAML is on forgetting quotation marks when they are needed.)</p>
 <p>This portion of the R Markdown file is called the YAML header. It stores metadata about your document. It is separated by <code>---</code> before and <code>---</code> after on their own lines. RStudio will warn you by coloring the <code>---</code> red if you accidentally add a space before them.</p>
+<p>You’ll need to make sure to include a space after each of the YAML entries. You’ll receive an error if you have something like that below, for example:</p>
+<div class="sourceCode"><pre class="sourceCode yaml"><code class="sourceCode yaml"><span class="fu">title:</span> <span class="st">&quot;Light Lab&quot;</span>
+<span class="fu">author:</span> <span class="st">&quot;Chester Ismay&quot;</span>
+<span class="fu">date:</span><span class="st">&quot;August 30, 2016&quot;</span>
+<span class="fu">output:</span> chemistr::chem_lab_word</code></pre></div>
+<p>There needs to be a space after the <code>:</code> for the <code>date</code> field.</p>
 <p>The last line here corresponds to the type of output that will be produced. In this case, I’ve created a nice way for you to output this R Markdown file to a DOCX (Word document) format. The <code>chem_lab_word</code> document format in <code>chemistr</code> creates a Word document with figure captions enabled by default and images with size 3 inches in height and 6 inches in width by default.</p>
 </div>
 <div id="initial-r-chunk" class="section level3">
@@ -206,8 +212,7 @@ Figure 1.1: Getting the Light R Markdown template
 Figure 1.2: Initial Knit Error
 </p>
 </div>
-<p>Danielle has created lab templates that might not necessarily build without errors immediately for you. You should carefully read over the directions in each chunk (The comments after the <code>#</code> in the R chunks.) before pressing <strong>Knit</strong>. Here we see that the error occurs near line 15 of our R Markdown file.</p>
-<p>The <code>Color</code> and <code>WavelengthRange</code> vectors need to have some values entered. These results will correspond to what you observed in lab. I will enter some demo results in here and also show you how to use the R Console to check your results. You’ll see that the <code>Color</code> and <code>WavelengthRange</code> vectors must be of the same length when we create a <code>data_frame</code> to combine them together into “spreadsheet” format in the variable named <code>Q1_data</code>:</p>
+<p>Danielle has created lab templates that might not necessarily build without errors immediately for you. You should carefully read over the directions in each chunk (The comments after the <code>#</code> in the R chunks.) before pressing <strong>Knit</strong>. Here we see that the error occurs near line 15 of our R Markdown file. The <code>Color</code> and <code>WavelengthRange</code> vectors need to have some values entered. These results will correspond to what you observed in lab. I will enter some demo results in here and also show you how to use the R Console to check your results. You’ll see that the <code>Color</code> and <code>WavelengthRange</code> vectors must be of the same length when we create a <code>data_frame</code> to combine them together into “spreadsheet” format in the variable named <code>Q1_data</code>:</p>
 <div class="figure" style="text-align: center"><span id="fig:enterdata"></span>
 <img src="gifs/enter_data.gif" alt="Enter values for Color and WavelengthRange" width="\textwidth" />
 <p class="caption">
@@ -215,6 +220,7 @@ Figure 1.3: Enter values for Color and WavelengthRange
 </p>
 </div>
 <p>You should use the R Console to check your results in the R chunks by either entering the R code line by line into the Console or by pressing the <strong>Run Current Chunk</strong> button (the green Play button). We see here that <code>Q1_data</code> is 6 rows by 2 columns and stores our results in “spreadsheet” form as a <code>data_frame</code>.</p>
+<p>Note that you’ll also receive an error if you have a different number of entries for <code>WavelengthRange</code> and <code>Color</code>. Data frames must have an equal number of rows when you combine the columns together via <code>data_frame</code>.</p>
 </div>
 <div id="a-nice-table-r-chunk" class="section level3">
 <h3><span class="header-section-number">1.2.5</span> A nice table R chunk</h3>
@@ -284,7 +290,7 @@ Figure 1.7: Save as PDF on Mac from Microsoft Word
         </div>
       </div>
 <a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="A-appendix-rstudio-desktop.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+<a href="A-rstudio-desktop.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
 
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>
@@ -311,7 +317,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/ismayc/chemistr-book-source/edit/master/01-light.Rmd",
+"link": "https://github.com/ismayc/chemistr-book/edit/master/01-light.Rmd",
 "text": null
 },
 "download": ["help_manual.pdf"],

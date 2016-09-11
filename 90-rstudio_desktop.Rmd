@@ -1,6 +1,6 @@
 # (APPENDIX) Appendix {-}
 
-# Appendix -- RStudio Desktop
+# RStudio Desktop
 
 More advanced users of RStudio may be interested in using the RStudio Desktop version installed on their own computer instead of using the RStudio Server.  It is encouraged that all students do this after they have some familiarity with how RStudio works.  The RStudio Server is a great way to learn how this works while providing the ability for more advanced users to give support to learning through Shared Projects.  Downloading the RStudio Desktop allows for resources to be freed up on the RStudio Server though and if you are performing more advanced calculations it makes more sense to download your own version of RStudio instead of running them on the RStudio Server.
 

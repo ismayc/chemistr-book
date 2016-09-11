@@ -1,4 +1,4 @@
-# Appendix -- Lab 1: Light (More Details) {#appendix-light}
+# Lab 1: Light (More Details) {#appendix-light}
 
 ## The `chem_table` function
 

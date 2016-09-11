@@ -43,6 +43,7 @@
 % citations
 \usepackage{natbib}
 \bibliographystyle{apalike}
+%\renewcommand{\bibsection}{\chapter*{References}}
 
 % pandoc syntax highlighting
 \usepackage{color}
@@ -98,6 +99,10 @@
 % morefloats
 \usepackage{morefloats}
 
+% force floats added by CII
+\usepackage{float}
+\floatplacement{figure}{H}
+
 
 % tightlist macro required by pandoc >= 1.14
 \providecommand{\tightlist}{%
@@ -105,8 +110,9 @@
 
 % title / author / date
 \title{LeaRning R in ChemistRy at Reed College}
+
 \author{Chester Ismay}
-\date{2016-09-08}
+\date{2016-09-11}
 
 \usepackage{booktabs}
 \usepackage{longtable}
@@ -178,6 +184,7 @@
 
 \begin{document}
 
+%\let\allcaps=\relax
 \maketitle
 
 
@@ -226,7 +233,7 @@ If further clarification is needed on any other aspect of the book,
 please email \href{mailto:cismay@reed.edu}{me} with a reference to the
 error/area where more guidance is necessary. More advanced users are
 encouraged to create a GitHub issue
-\href{https://github.com/ismayc/chemistr-book-source/issues}{here}. Pull
+\href{https://github.com/ismayc/chemistr-book/issues}{here}. Pull
 requests on GitHub for typos or improvements are also welcome and you
 can easily do so by clicking on the Edit button near Search at the top
 of the HTML version of the book.
@@ -371,7 +378,7 @@ RStudio project is. We are happy to help you learn how to use R!
 \addcontentsline{toc}{subsection}{Book was last updated:}
 
 \begin{verbatim}
-## [1] "By cismay on Thursday, September 08, 2016 12:08:31 PDT"
+## [1] "By cismay on Sunday, September 11, 2016 16:54:45 PDT"
 \end{verbatim}
 
 \chapter{Lab 1: Light}\label{light}
@@ -421,6 +428,22 @@ metadata about your document. It is separated by \texttt{-\/-\/-} before
 and \texttt{-\/-\/-} after on their own lines. RStudio will warn you by
 coloring the \texttt{-\/-\/-} red if you accidentally add a space before
 them.
+
+You'll need to make sure to include a space after each of the YAML
+entries. You'll receive an error if you have something like that below,
+for example:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{title:} \StringTok{"Light Lab"}
+\FunctionTok{author:} \StringTok{"Chester Ismay"}
+\FunctionTok{date:}\StringTok{"August 30, 2016"}
+\FunctionTok{output:} \NormalTok{chemistr::chem_lab_word}
+\end{Highlighting}
+\end{Shaded}
+
+There needs to be a space after the \texttt{:} for the \texttt{date}
+field.
 
 The last line here corresponds to the type of output that will be
 produced. In this case, I've created a nice way for you to output this R
@@ -476,15 +499,14 @@ Danielle has created lab templates that might not necessarily build
 without errors immediately for you. You should carefully read over the
 directions in each chunk (The comments after the \texttt{\#} in the R
 chunks.) before pressing \textbf{Knit}. Here we see that the error
-occurs near line 15 of our R Markdown file.
-
-The \texttt{Color} and \texttt{WavelengthRange} vectors need to have
-some values entered. These results will correspond to what you observed
-in lab. I will enter some demo results in here and also show you how to
-use the R Console to check your results. You'll see that the
-\texttt{Color} and \texttt{WavelengthRange} vectors must be of the same
-length when we create a \texttt{data\_frame} to combine them together
-into ``spreadsheet'' format in the variable named \texttt{Q1\_data}:
+occurs near line 15 of our R Markdown file. The \texttt{Color} and
+\texttt{WavelengthRange} vectors need to have some values entered. These
+results will correspond to what you observed in lab. I will enter some
+demo results in here and also show you how to use the R Console to check
+your results. You'll see that the \texttt{Color} and
+\texttt{WavelengthRange} vectors must be of the same length when we
+create a \texttt{data\_frame} to combine them together into
+``spreadsheet'' format in the variable named \texttt{Q1\_data}:
 
 \vspace{0.1in}
 
@@ -497,6 +519,11 @@ either entering the R code line by line into the Console or by pressing
 the \textbf{Run Current Chunk} button (the green Play button). We see
 here that \texttt{Q1\_data} is 6 rows by 2 columns and stores our
 results in ``spreadsheet'' form as a \texttt{data\_frame}.
+
+Note that you'll also receive an error if you have a different number of
+entries for \texttt{WavelengthRange} and \texttt{Color}. Data frames
+must have an equal number of rows when you combine the columns together
+via \texttt{data\_frame}.
 
 \subsection{A nice table R chunk}\label{a-nice-table-r-chunk}
 
@@ -618,7 +645,7 @@ machines or Microsoft Word on a PC. You may also have the option to
 \appendix
 
 
-\chapter{Appendix -- RStudio Desktop}\label{appendix-rstudio-desktop}
+\chapter{RStudio Desktop}\label{rstudio-desktop}
 
 More advanced users of RStudio may be interested in using the RStudio
 Desktop version installed on their own computer instead of using the
@@ -706,7 +733,7 @@ templates
 \href{https://github.com/ismayc/chemistr/blob/master/NEWS.md}{here} with
 dates given.
 
-\chapter{Appendix -- Lab 1: Light (More Details)}\label{appendix-light}
+\chapter{Lab 1: Light (More Details)}\label{appendix-light}
 
 \section{\texorpdfstring{The \texttt{chem\_table}
 function}{The chem\_table function}}\label{the-chemux5ftable-function}
@@ -798,8 +825,10 @@ automatic numbering of the figures:
 We could then reference our picture in the text of our document by using
 \texttt{\textbackslash{}@ref(fig:myimage)}.
 
+\renewcommand{\bibname}{References}
+\addcontentsline{toc}{chapter}{References}
 \bibliography{bib/packages.bib,bib/books.bib,bib/articles.bib}
-
-
+% 
+% 
 
 \end{document}

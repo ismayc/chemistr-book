@@ -18,6 +18,17 @@ I've already entered some values into my R Markdown file.  First I gave a title 
 
 This portion of the R Markdown file is called the YAML header.  It stores metadata about your document.  It is separated by `---` before and `---` after on their own lines.  RStudio will warn you by coloring the `---` red if you accidentally add a space before them.
 
+You'll need to make sure to include a space after each of the YAML entries.  You'll receive an error if you have something like that below, for example:
+
+```yaml
+title: "Light Lab"
+author: "Chester Ismay"
+date:"August 30, 2016"
+output: chemistr::chem_lab_word
+```
+
+There needs to be a space after the `:` for the `date` field.
+
 The last line here corresponds to the type of output that will be produced.  In this case, I've created a nice way for you to output this R Markdown file to a DOCX (Word document) format.  The `chem_lab_word` document format in `chemistr` creates a Word document with figure captions enabled by default and images with size 3 inches in height and 6 inches in width by default.
 
 ### Initial R Chunk
@@ -39,14 +50,15 @@ gif_link("gifs/knit_error1.gif")
 ```
 
 Danielle has created lab templates that might not necessarily build without errors immediately for you.  You should carefully read over the directions in each chunk (The comments after the `#` in the R chunks.) before pressing **Knit**.  Here we see that the error occurs near line 15 of our R Markdown file. 
-
-The `Color` and `WavelengthRange` vectors need to have some values entered.  These results will correspond to what you observed in lab.  I will enter some demo results in here and also show you how to use the R Console to check your results.  You'll see that the `Color` and `WavelengthRange` vectors must be of the same length when we create a `data_frame` to combine them together into "spreadsheet" format in the variable named `Q1_data`:
+The `Color` and `WavelengthRange` vectors need to have some values entered. These results will correspond to what you observed in lab.  I will enter some demo results in here and also show you how to use the R Console to check your results.  You'll see that the `Color` and `WavelengthRange` vectors must be of the same length when we create a `data_frame` to combine them together into "spreadsheet" format in the variable named `Q1_data`:
 
 ```{r enterdata, echo=FALSE, fig.cap="Enter values for Color and WavelengthRange"}
 gif_link("gifs/enter_data.gif")
 ```
 
 You should use the R Console to check your results in the R chunks by either entering the R code line by line into the Console or by pressing the **Run Current Chunk** button (the green Play button).  We see here that `Q1_data` is 6 rows by 2 columns and stores our results in "spreadsheet" form as a `data_frame`.
+
+Note that you'll also receive an error if you have a different number of entries for `WavelengthRange` and `Color`.  Data frames must have an equal number of rows when you combine the columns together via `data_frame`.
 
 ### A nice table R chunk
 

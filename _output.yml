@@ -15,6 +15,7 @@ bookdown::gitbook:
       link: https://github.com/ismayc/chemistr-book/edit/master/%s
 bookdown::pdf_book:
   base_format: tufte::tufte_book
+  template: tufte-handout.tex
   includes:
     in_header: preamble.tex
   latex_engine: xelatex

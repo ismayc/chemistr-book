@@ -25,7 +25,7 @@
 
 <meta name="author" content="Chester Ismay">
 
-<meta name="date" content="2016-09-08">
+<meta name="date" content="2016-09-11">
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -136,18 +136,18 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="1.6" data-path="1-light.html"><a href="1-light.html#converting-your-word-document-to-pdf"><i class="fa fa-check"></i><b>1.6</b> Converting your Word document to PDF</a></li>
 </ul></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
-<li class="chapter" data-level="A" data-path="A-appendix-rstudio-desktop.html"><a href="A-appendix-rstudio-desktop.html"><i class="fa fa-check"></i><b>A</b> Appendix – RStudio Desktop</a><ul>
-<li class="chapter" data-level="A.1" data-path="A-appendix-rstudio-desktop.html"><a href="A-appendix-rstudio-desktop.html#downloading-r-and-rstudio-desktop"><i class="fa fa-check"></i><b>A.1</b> Downloading R and RStudio Desktop</a></li>
-<li class="chapter" data-level="A.2" data-path="A-appendix-rstudio-desktop.html"><a href="A-appendix-rstudio-desktop.html#downloading-and-installing-chemistr"><i class="fa fa-check"></i><b>A.2</b> Downloading and installing chemistr</a></li>
+<li class="chapter" data-level="A" data-path="A-rstudio-desktop.html"><a href="A-rstudio-desktop.html"><i class="fa fa-check"></i><b>A</b> RStudio Desktop</a><ul>
+<li class="chapter" data-level="A.1" data-path="A-rstudio-desktop.html"><a href="A-rstudio-desktop.html#downloading-r-and-rstudio-desktop"><i class="fa fa-check"></i><b>A.1</b> Downloading R and RStudio Desktop</a></li>
+<li class="chapter" data-level="A.2" data-path="A-rstudio-desktop.html"><a href="A-rstudio-desktop.html#downloading-and-installing-chemistr"><i class="fa fa-check"></i><b>A.2</b> Downloading and installing chemistr</a></li>
 </ul></li>
-<li class="chapter" data-level="B" data-path="B-appendix-light.html"><a href="B-appendix-light.html"><i class="fa fa-check"></i><b>B</b> Appendix – Lab 1: Light (More Details)</a><ul>
+<li class="chapter" data-level="B" data-path="B-appendix-light.html"><a href="B-appendix-light.html"><i class="fa fa-check"></i><b>B</b> Lab 1: Light (More Details)</a><ul>
 <li class="chapter" data-level="B.1" data-path="B-appendix-light.html"><a href="B-appendix-light.html#the-chem_table-function"><i class="fa fa-check"></i><b>B.1</b> The <code>chem_table</code> function</a></li>
 <li class="chapter" data-level="B.2" data-path="B-appendix-light.html"><a href="B-appendix-light.html#the-include_graphics-function"><i class="fa fa-check"></i><b>B.2</b> The <code>include_graphics</code> function</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-<li><a href="https://github.com/ismayc/chemistr-book-source/issues" target="blank">Create a GitHub Issue</a></li>
+<li><a href="https://github.com/ismayc/chemistr-book/issues" target="blank">Create a GitHub Issue</a></li>
 <li><a href="mailto:chester.ismay@gmail.com" target="blank">Email Chester</a></li>
 
 </ul>
@@ -170,7 +170,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="header">
 <h1 class="title">LeaRning R in ChemistRy at Reed College</h1>
 <h4 class="author"><em>Chester Ismay</em></h4>
-<h4 class="date"><em>2016-09-08</em></h4>
+<h4 class="date"><em>2016-09-11</em></h4>
 </div>
 <div id="introduction" class="section level1 unnumbered">
 <h1>Introduction</h1>
@@ -179,7 +179,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>In the HTML version of this book, you can also download the PDF version of the book by clicking on PDF button in the top toolbar of the page. HTML is the preferred format but the PDF format may be preferred for some readers. Links to the different GIFs directly found in the HTML version are provided in the PDF version.</p>
 <p>This resource is designed to assist students in CHEM 101/102 in using RStudio and R Markdown to complete their labs. (A more general reference to the specifics of R, RStudio and R Markdown is available in a different free book <a href="http://ismayc.github.io/rbasics-book">here</a> <span class="citation">(Ismay <a href="#ref-usedtor2016">2016</a>)</span>). This resource will show you GIFs explaining how to do some common procedures you’ll need to do to complete labs. In addition, it will provide more details about the specifics of the different lab templates available in the <code>chemistr</code> R package. Each chapter of this book will correspond to each of the different labs.</p>
 <p>Lastly, if you are interested, you’ll find instructions on how to complete the labs using RStudio Desktop instead of the RStudio Server in the Appendix. The Appendix will also include descriptions of the code that is sitting “behind the scenes” in many of the functions created in the <code>chemistr</code> package: <code>chem_table</code>, <code>chem_scatter</code>, <code>chem_clustered.bar</code>, etc. These functions were written to ease a beginner into working with R. Those interested in customizing their lab reports further should look over the R code in the Appendix. Additionally, many of the needed packages are automatically loaded when the <code>chemistr</code> package is loaded using <code>library(chemistr)</code>. You’ll see how each of these packages is used in the Appendix.</p>
-<p>If further clarification is needed on any other aspect of the book, please email <a href="mailto:cismay@reed.edu">me</a> with a reference to the error/area where more guidance is necessary. More advanced users are encouraged to create a GitHub issue <a href="https://github.com/ismayc/chemistr-book-source/issues">here</a>. Pull requests on GitHub for typos or improvements are also welcome and you can easily do so by clicking on the Edit button near Search at the top of the HTML version of the book.</p>
+<p>If further clarification is needed on any other aspect of the book, please email <a href="mailto:cismay@reed.edu">me</a> with a reference to the error/area where more guidance is necessary. More advanced users are encouraged to create a GitHub issue <a href="https://github.com/ismayc/chemistr-book/issues">here</a>. Pull requests on GitHub for typos or improvements are also welcome and you can easily do so by clicking on the Edit button near Search at the top of the HTML version of the book.</p>
 <p>This book will evolve and be updated as needed based on feedback. You can always check the date at the end of the chapter to see when the book was last updated. It is recommended that you use Google Chrome as your browser since GIFs sometimes do not load automatically with other browsers.</p>
 </div>
 <div id="starting-the-labs" class="section level2 unnumbered">
@@ -213,7 +213,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <p>We are here to help and please don’t give up on this. Learning how to work with R even at the most basic of levels will help you long-term in keeping track of analyses and getting you on the path to reproducible research. This will help you in your academic careers and whatever you do after your academic career ends. If you need assistance, please email <a href="dcass@reed.edu">Danielle</a> and <a href="cismay@reed.edu">Chester</a> with your concise error specifying in which lab and what the name of your RStudio project is. We are happy to help you learn how to use R!</p>
 <div id="book-was-last-updated" class="section level3 unnumbered">
 <h3>Book was last updated:</h3>
-<pre><code>## [1] &quot;By cismay on Thursday, September 08, 2016 12:08:46 PDT&quot;</code></pre>
+<pre><code>## [1] &quot;By cismay on Sunday, September 11, 2016 16:55:53 PDT&quot;</code></pre>
 
 </div>
 </div>
@@ -263,7 +263,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/ismayc/chemistr-book-source/edit/master/index.Rmd",
+"link": "https://github.com/ismayc/chemistr-book/edit/master/index.Rmd",
 "text": null
 },
 "download": ["help_manual.pdf"],
