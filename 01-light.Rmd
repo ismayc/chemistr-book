@@ -60,6 +60,14 @@ You should use the R Console to check your results in the R chunks by either ent
 
 Note that you'll also receive an error if you have a different number of entries for `WavelengthRange` and `Color`.  Data frames must have an equal number of rows when you combine the columns together via `data_frame`.
 
+The `chemistr` package also loads the `dplyr` package where the `data_frame` function resides.  If you are running the chunks by pressing the green "play" button, which sends the current chunk into the R console, you'll need to remember to load all previous chunks as well.  If you receive an error message such as
+
+```
+Error: could not find function "data_frame"
+```
+
+this means that you have not loaded the `chemistr` package by sending the `library(chemistr)` code into the Console BEFORE you run the declarations for `Color`, `Wavelength`, and `Q1_data <- data_frame(Color, WavelengthRange)`.  The code chunks read like a book so if you are receiving errors of the "could not find" variety, it probably means you haven't run all chunks up to the point of your current chunk in the Console.  These sorts of errors are also referenced in Chapter 6 of "Getting Used to R, RStudio, and R Markdown"[@usedtor2016].
+
 ### A nice table R chunk
 
 The `chem_table` function will result in a nicely formatted table being produced in your resulting Word document.  You'll need to specify a caption inside the parentheses instead of the `"A lovely caption for the table"` default.  You'll also see that RStudio will create a second quotation mark when you might not want one.  Carefully look over your document if you have errors and make sure there aren't two quotation marks when you only wanted one.  You'll see this below:

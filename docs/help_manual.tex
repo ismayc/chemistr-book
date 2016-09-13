@@ -394,7 +394,7 @@ quickly look into your errors.
 \addcontentsline{toc}{subsection}{Book was last updated:}
 
 \begin{verbatim}
-## [1] "By cismay on Monday, September 12, 2016 21:35:44 PDT"
+## [1] "By cismay on Monday, September 12, 2016 22:39:41 PDT"
 \end{verbatim}
 
 \chapter{Lab 1: Light}\label{light}
@@ -540,6 +540,26 @@ Note that you'll also receive an error if you have a different number of
 entries for \texttt{WavelengthRange} and \texttt{Color}. Data frames
 must have an equal number of rows when you combine the columns together
 via \texttt{data\_frame}.
+
+The \texttt{chemistr} package also loads the \texttt{dplyr} package
+where the \texttt{data\_frame} function resides. If you are running the
+chunks by pressing the green ``play'' button, which sends the current
+chunk into the R console, you'll need to remember to load all previous
+chunks as well. If you receive an error message such as
+
+\begin{verbatim}
+Error: could not find function "data_frame"
+\end{verbatim}
+
+this means that you have not loaded the \texttt{chemistr} package by
+sending the \texttt{library(chemistr)} code into the Console BEFORE you
+run the declarations for \texttt{Color}, \texttt{Wavelength}, and
+\texttt{Q1\_data\ \textless{}-\ data\_frame(Color,\ WavelengthRange)}.
+The code chunks read like a book so if you are receiving errors of the
+``could not find'' variety, it probably means you haven't run all chunks
+up to the point of your current chunk in the Console. These sorts of
+errors are also referenced in Chapter 6 of ``Getting Used to R, RStudio,
+and R Markdown''\citep{usedtor2016}.
 
 \subsection{A nice table R chunk}\label{a-nice-table-r-chunk}
 
