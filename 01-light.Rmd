@@ -62,7 +62,7 @@ Note that you'll also receive an error if you have a different number of entries
 
 ### A nice table R chunk
 
-The `chem_table` function will result in a nicely formatted table being produced in your resulting Word document.  You'll need to specify a caption inside the parentheses instead of the `"A lovely caption for the table"` default.  You'll also see that RStudio will create a second quotation mark when you might not want one.  Carefully look over your document if you have errors and make sure there isn't two quotation marks when you only wanted one.  You'll see this below:
+The `chem_table` function will result in a nicely formatted table being produced in your resulting Word document.  You'll need to specify a caption inside the parentheses instead of the `"A lovely caption for the table"` default.  You'll also see that RStudio will create a second quotation mark when you might not want one.  Carefully look over your document if you have errors and make sure there aren't two quotation marks when you only wanted one.  You'll see this below:
 
 ```{r twoquotes, echo=FALSE, fig.cap="Two quotation marks error"}
 gif_link("gifs/two_quotes.gif")
