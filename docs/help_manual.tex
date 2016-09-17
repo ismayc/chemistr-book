@@ -112,7 +112,7 @@
 \title{LeaRning R in ChemistRy at Reed College}
 
 \author{Chester Ismay}
-\date{2016-09-12}
+\date{2016-09-16}
 
 \usepackage{booktabs}
 \usepackage{longtable}
@@ -408,12 +408,13 @@ quickly look into your errors.
 \addcontentsline{toc}{subsection}{Book was last updated:}
 
 \begin{verbatim}
-## [1] "By cismay on Monday, September 12, 2016 23:59:07 PDT"
+## [1] "By cismay on Friday, September 16, 2016 17:57:15 PDT"
 \end{verbatim}
 
 \chapter{Lab 1: Light}\label{light}
 
-\section{Getting the lab template}\label{getting-the-lab-template}
+\hypertarget{getting-the-lab-template}{\section{Getting the lab
+template}\label{getting-the-lab-template}}
 
 In RStudio, you'll find the R Markdown template that you will update
 with your own results by following along with the GIF below:
@@ -442,7 +443,8 @@ it since \texttt{Home} is the parent directory of
 \section{The parts of the lab
 template}\label{the-parts-of-the-lab-template}
 
-\subsection{The YAML header}\label{the-yaml-header}
+\hypertarget{the-yaml-header}{\subsection{The YAML
+header}\label{the-yaml-header}}
 
 I've already entered some values into my R Markdown file. First I gave a
 title to the R Markdown file: ``Lab 1 - Light''. I then entered my name
@@ -679,18 +681,206 @@ PDF}\label{converting-your-word-document-to-pdf}
 
 The directions for each lab on Moodle say to upload a PDF version of
 your lab. You'll see how to create this PDF from inside Microsoft Word
-for Mac. A similar procedure can be done using OpenOffice
-(\url{http://www.openoffice.org/download/}) on Linux, Mac, or Windows
-machines or Microsoft Word on a PC. You may also have the option to
-\textbf{Save As} a PDF there and you can get to this option by going to
-\textbf{File -\textgreater{} Save As -\textgreater{} File Format:
--\textgreater{} PDF} on the Mac if you prefer.
+for Mac. A similar procedure can be done using LibreOffice
+(\url{https://www.libreoffice.org/download/libreoffice-fresh/}) on
+Linux, Mac, or Windows machines or Microsoft Word on a PC. You may also
+have the option to \textbf{Save As} a PDF there and you can get to this
+option by going to \textbf{File -\textgreater{} Save As -\textgreater{}
+File Format: -\textgreater{} PDF} on the Mac if you prefer.
 
 \vspace{0.1in}
 
 \begin{center}\footnotesize{\url{https://raw.githubusercontent.com/ismayc/chemistr-book/master/gifs/word_pdf.gif}}\end{center}
 
 \vspace{0.1in}
+
+\chapter{Lab 2: Beer's Law}\label{beers}
+
+\section{Getting the R Markdown lab
+template}\label{getting-the-r-markdown-lab-template}
+
+Begin by creating a new folder called \texttt{Lab2-Beers} in your
+\texttt{CHEM101\_FirstnameLastname} folder. Next, follow steps similar
+to those found in the GIF in
+\protect\hyperlink{getting-the-lab-template}{Section 1.1}, but select
+the \textbf{Beer's Law} R Markdown template instead of \textbf{Light}
+and save your file in the newly created \texttt{Lab2-Beers} folder as
+\texttt{lab2.Rmd}.
+
+\section{The parts of the lab
+template}\label{the-parts-of-the-lab-template-1}
+
+\subsection{YAML}\label{yaml}
+
+Refer back to \protect\hyperlink{the-yaml-header}{The YAML header}
+section in Chapter \ref{light} for a review on what the entries here
+mean. Remember to be careful with spacing!
+
+\subsection{Initial R Chunk}\label{initial-r-chunk-1}
+
+Remember that the \texttt{chemistr} package automatically loads in many
+useful packages for you. It also includes functions such as
+\texttt{chem\_table} you worked with in Lab 1 and \texttt{chem\_scatter}
+that you will work with in this lab.
+
+\subsection{Directions chunk}\label{directions-chunk}
+
+Immediately after the \texttt{\#\#\ Data} header, you'll see a chunk of
+commented R code Danielle has including giving you directions on what
+the chunks after it should include. Note that this chunk again uses
+\texttt{include=FALSE} so you won't see any of this in the resulting
+knitted DOCX file.
+
+\subsection{First data chunk}\label{first-data-chunk}
+
+After carefully reading over the commented R code Danielle has added
+providing you with directions, you now are ready to enter values in for
+Part A. Note that you can change the variable names from
+\texttt{Independent1} and \texttt{Dependent1} to something else, but
+remember that those names cannot include spaces or other mathematical
+objects. Remember that if you change the name of \texttt{Independent1}
+to, say, \texttt{my\_indep} that you'll need to make sure to change all
+references from \texttt{Independent1} to \texttt{my\_indep} in the R
+code that follows.
+
+\subsection{Transforming to a logarithmic
+scale}\label{transforming-to-a-logarithmic-scale}
+
+We often need to look at data not on our usual scale but instead on a
+logarithmic scale. With logarithms we specify a base and you may
+remember from algebra that logarithms are related to exponential
+functions. In this lab, you'll be using ``log base 10'' and the
+\texttt{log10} function in R. I recommend you enter \texttt{?log10} into
+the R Console for more information.
+
+One of the powerful features of R is its ability to do vectorized
+calculations. Here is an example:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{my_nums <-}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DecValTok{10}\NormalTok{, }\DecValTok{15}\NormalTok{, }\DecValTok{105}\NormalTok{, }\DecValTok{500}\NormalTok{, }\DecValTok{100231}\NormalTok{)}
+\KeywordTok{log10}\NormalTok{(my_nums)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 1.000000 1.176091 2.021189 2.698970 5.001002
+\end{verbatim}
+
+The code above produces the ``log base 10'' for each of the values in
+\texttt{my\_nums}. We haven't assigned this to anything though since we
+didn't include the assignment operator \texttt{\textless{}-}. In the GIF
+below, I'll show you how to create one of the two new variables you'll
+need to create. Remember that you'll also need to update your
+\texttt{data\_frame} call to include both of your newly created
+variables as well.
+
+\vspace{0.1in}
+
+\begin{center}\footnotesize{\url{https://raw.githubusercontent.com/ismayc/chemistr-book/master/gifs/log.gif}}\end{center}
+
+\vspace{0.1in}
+
+As I have in the GIF, you should use the R Console to check your results
+in the R chunks by either entering the R code line by line into the
+Console or by pressing the \textbf{Run Current Chunk} button (the green
+Play button).
+
+\subsection{Copying from one chunk into a new
+chunk}\label{copying-from-one-chunk-into-a-new-chunk}
+
+When you are first learning to program, one of the best strategies you
+can do is to copy working code and make small changes to the code to
+produce a different result. In the \texttt{plot1} chunk (remember to
+look at the phrase right after the \texttt{\{r} and before the comma
+that begins your R chunk to find the name), you were shown how to
+produce a scatterplot of \texttt{Dependent1} on the vertical axis and
+\texttt{Independent1} on the horizontal axis (frequently written as ``a
+scatterplot of \texttt{Dependent1} versus \texttt{Independent1}). In the
+GIF below, you'll see how we could produce a plot of''log base 10"
+\texttt{Dependent1} versus \texttt{Independent1}. (Remember that you
+first need to create the log variable.)
+
+\vspace{0.1in}
+
+\begin{center}\footnotesize{\url{https://raw.githubusercontent.com/ismayc/chemistr-book/master/gifs/log2.gif}}\end{center}
+
+\vspace{0.1in}
+
+You'll need to use keyboard shortcuts to copy-and-paste code. (Ctrl + C
+on a Windows machine or Command + C on a Mac to copy. Then use Ctrl + V
+on a Windows machine or Command + V on a Mac to paste.)
+
+\subsection{Regression}\label{regression}
+
+Carefully note in the GIF how I have updated the variables to produce a
+new fit and a new plot. The \texttt{lm} function expects
+\texttt{y\ \textasciitilde{}\ x} so make sure you have them in the
+correct order. This is used to get the coefficients from a straight line
+regression fit of the data. The \texttt{summary} function produces a lot
+of important information about this fit.
+
+\subsection{The remainder of the lab}\label{the-remainder-of-the-lab-1}
+
+In the remaining portions of the lab, you are asked to modify the
+results above to make 4 additional plots. Additionally, you'll need to
+provide commentary text below the Discussion header.
+
+\section{Note on white space}\label{note-on-white-space-1}
+
+As you look over the R Markdown document you'll see that there is always
+a new line of white space between the discussion and the R chunks and
+also between each of the R chunks. It is highly recommended that you
+also follow this workflow. You'll receive some strange errors at times
+if you try to stack everything together and it's also much harder to
+follow for another reader of your document if you have everything
+bunched together. \textbf{White space is your friend!}
+
+\section{Spell-check}\label{spell-check-1}
+
+Just as I'm sure your English teachers have told you to spell check your
+documents before submitting, you are also encouraged to do so here.
+There is a built-in spell check option found near the \textbf{Knit}
+button.
+
+\begin{center}\includegraphics[width=0.3\textwidth]{images/spellcheck} \end{center}
+
+Please run this and carefully read over your lab report before
+converting it to a PDF and submitting it to Moodle.
+
+\section{Converting your Word document to
+PDF}\label{converting-your-word-document-to-pdf-1}
+
+The directions for each lab on Moodle say to upload a PDF version of
+your lab. You'll see how to create this PDF from inside Microsoft Word
+for Mac. A similar procedure can be done using LibreOffice
+(\url{https://www.libreoffice.org/download/libreoffice-fresh/}) on
+Linux, Mac, or Windows machines or Microsoft Word on a PC. You may also
+have the option to \textbf{Save As} a PDF there and you can get to this
+option by going to \textbf{File -\textgreater{} Save As -\textgreater{}
+File Format: -\textgreater{} PDF} on the Mac if you prefer.
+
+\vspace{0.1in}
+
+\begin{center}\footnotesize{\url{https://raw.githubusercontent.com/ismayc/chemistr-book/master/gifs/word_pdf.gif}}\end{center}
+
+\vspace{0.1in}
+
+\section{Note on requesting help}\label{note-on-requesting-help}
+
+It is extremely helpful for us if you can share a link to your RStudio
+Project in any emails requesting help. This link is available by going
+to your RStudio project in the top right corner of RStudio, clicking on
+it and then selecting \textbf{Share Project}, and then select
+\textbf{Sharing} as seen in the screenshots below.
+
+\begin{center}\includegraphics[width=\textwidth]{screenshots/shareproj1} \end{center}
+
+\begin{center}\includegraphics[width=0.6\linewidth]{screenshots/shareproj2} \end{center}
+
+The link is given in the \textbf{Project URL}. Please copy this entire
+link into the body of your emails to Danielle or I so that we can
+quickly look into your errors.
 
 \appendix
 
@@ -786,7 +976,7 @@ dates given.
 \chapter{Lab 1: Light (More Details)}\label{appendix-light}
 
 \section{\texorpdfstring{The \texttt{chem\_table}
-function}{The chem\_table function}}\label{the-chemux5ftable-function}
+function}{The chem\_table function}}\label{the-chem_table-function}
 
 The \texttt{chem\_table} function is essentially a wrapper function to
 the \texttt{pandoc.table} function in the \texttt{pander} package. Here
@@ -840,7 +1030,7 @@ specifies that an extra line of white space will be printed immediately
 following the table.
 
 \section{\texorpdfstring{The \texttt{include\_graphics}
-function}{The include\_graphics function}}\label{the-includeux5fgraphics-function}
+function}{The include\_graphics function}}\label{the-include_graphics-function}
 
 The \texttt{include\_graphics} function enables you to include pictures
 that are stored as image files (\texttt{*.png} or \texttt{*.jpg}, for

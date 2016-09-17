@@ -25,7 +25,7 @@
 
 <meta name="author" content="Chester Ismay">
 
-<meta name="date" content="2016-09-12">
+<meta name="date" content="2016-09-16">
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -39,7 +39,7 @@ MathJax.Hub.Config({
   
   
 <link rel="prev" href="index.html">
-<link rel="next" href="A-rstudio-desktop.html">
+<link rel="next" href="2-beers.html">
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -135,6 +135,23 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="1.4" data-path="1-light.html"><a href="1-light.html#note-on-white-space"><i class="fa fa-check"></i><b>1.4</b> Note on white space</a></li>
 <li class="chapter" data-level="1.5" data-path="1-light.html"><a href="1-light.html#spell-check"><i class="fa fa-check"></i><b>1.5</b> Spell-check</a></li>
 <li class="chapter" data-level="1.6" data-path="1-light.html"><a href="1-light.html#converting-your-word-document-to-pdf"><i class="fa fa-check"></i><b>1.6</b> Converting your Word document to PDF</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-beers.html"><a href="2-beers.html"><i class="fa fa-check"></i><b>2</b> Lab 2: Beer’s Law</a><ul>
+<li class="chapter" data-level="2.1" data-path="2-beers.html"><a href="2-beers.html#getting-the-r-markdown-lab-template"><i class="fa fa-check"></i><b>2.1</b> Getting the R Markdown lab template</a></li>
+<li class="chapter" data-level="2.2" data-path="2-beers.html"><a href="2-beers.html#the-parts-of-the-lab-template-1"><i class="fa fa-check"></i><b>2.2</b> The parts of the lab template</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="2-beers.html"><a href="2-beers.html#yaml"><i class="fa fa-check"></i><b>2.2.1</b> YAML</a></li>
+<li class="chapter" data-level="2.2.2" data-path="2-beers.html"><a href="2-beers.html#initial-r-chunk-1"><i class="fa fa-check"></i><b>2.2.2</b> Initial R Chunk</a></li>
+<li class="chapter" data-level="2.2.3" data-path="2-beers.html"><a href="2-beers.html#directions-chunk"><i class="fa fa-check"></i><b>2.2.3</b> Directions chunk</a></li>
+<li class="chapter" data-level="2.2.4" data-path="2-beers.html"><a href="2-beers.html#first-data-chunk"><i class="fa fa-check"></i><b>2.2.4</b> First data chunk</a></li>
+<li class="chapter" data-level="2.2.5" data-path="2-beers.html"><a href="2-beers.html#transforming-to-a-logarithmic-scale"><i class="fa fa-check"></i><b>2.2.5</b> Transforming to a logarithmic scale</a></li>
+<li class="chapter" data-level="2.2.6" data-path="2-beers.html"><a href="2-beers.html#copying-from-one-chunk-into-a-new-chunk"><i class="fa fa-check"></i><b>2.2.6</b> Copying from one chunk into a new chunk</a></li>
+<li class="chapter" data-level="2.2.7" data-path="2-beers.html"><a href="2-beers.html#regression"><i class="fa fa-check"></i><b>2.2.7</b> Regression</a></li>
+<li class="chapter" data-level="2.2.8" data-path="2-beers.html"><a href="2-beers.html#the-remainder-of-the-lab-1"><i class="fa fa-check"></i><b>2.2.8</b> The remainder of the lab</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="2-beers.html"><a href="2-beers.html#note-on-white-space-1"><i class="fa fa-check"></i><b>2.3</b> Note on white space</a></li>
+<li class="chapter" data-level="2.4" data-path="2-beers.html"><a href="2-beers.html#spell-check-1"><i class="fa fa-check"></i><b>2.4</b> Spell-check</a></li>
+<li class="chapter" data-level="2.5" data-path="2-beers.html"><a href="2-beers.html#converting-your-word-document-to-pdf-1"><i class="fa fa-check"></i><b>2.5</b> Converting your Word document to PDF</a></li>
+<li class="chapter" data-level="2.6" data-path="2-beers.html"><a href="2-beers.html#note-on-requesting-help"><i class="fa fa-check"></i><b>2.6</b> Note on requesting help</a></li>
 </ul></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="A" data-path="A-rstudio-desktop.html"><a href="A-rstudio-desktop.html"><i class="fa fa-check"></i><b>A</b> RStudio Desktop</a><ul>
@@ -275,7 +292,7 @@ Figure 1.6: Included photo and table in Word document
 </div>
 <div id="converting-your-word-document-to-pdf" class="section level2">
 <h2><span class="header-section-number">1.6</span> Converting your Word document to PDF</h2>
-<p>The directions for each lab on Moodle say to upload a PDF version of your lab. You’ll see how to create this PDF from inside Microsoft Word for Mac. A similar procedure can be done using OpenOffice (<a href="http://www.openoffice.org/download/" class="uri">http://www.openoffice.org/download/</a>) on Linux, Mac, or Windows machines or Microsoft Word on a PC. You may also have the option to <strong>Save As</strong> a PDF there and you can get to this option by going to <strong>File -&gt; Save As -&gt; File Format: -&gt; PDF</strong> on the Mac if you prefer.</p>
+<p>The directions for each lab on Moodle say to upload a PDF version of your lab. You’ll see how to create this PDF from inside Microsoft Word for Mac. A similar procedure can be done using LibreOffice (<a href="https://www.libreoffice.org/download/libreoffice-fresh/" class="uri">https://www.libreoffice.org/download/libreoffice-fresh/</a>) on Linux, Mac, or Windows machines or Microsoft Word on a PC. You may also have the option to <strong>Save As</strong> a PDF there and you can get to this option by going to <strong>File -&gt; Save As -&gt; File Format: -&gt; PDF</strong> on the Mac if you prefer.</p>
 <div class="figure" style="text-align: center"><span id="fig:wordpdf"></span>
 <img src="gifs/word_pdf.gif" alt="Save as PDF on Mac from Microsoft Word" width="\textwidth" />
 <p class="caption">
@@ -285,9 +302,6 @@ Figure 1.7: Save as PDF on Mac from Microsoft Word
 
 </div>
 </div>
-
-
-
 <h3>References</h3>
 <div id="refs" class="references">
 <div id="ref-usedtor2016">
@@ -300,7 +314,7 @@ Figure 1.7: Save as PDF on Mac from Microsoft Word
         </div>
       </div>
 <a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="A-rstudio-desktop.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+<a href="2-beers.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
 
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>

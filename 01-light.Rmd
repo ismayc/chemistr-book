@@ -121,7 +121,7 @@ Please run this and carefully read over your lab report before converting it to 
 
 ## Converting your Word document to PDF
 
-The directions for each lab on Moodle say to upload a PDF version of your lab.  You'll see how to create this PDF from inside Microsoft Word for Mac.  A similar procedure can be done using OpenOffice (http://www.openoffice.org/download/) on Linux, Mac, or Windows machines or Microsoft Word on a PC.  You may also have the option to **Save As** a PDF there and you can get to this option by going to **File -> Save As -> File Format: -> PDF** on the Mac if you prefer.
+The directions for each lab on Moodle say to upload a PDF version of your lab.  You'll see how to create this PDF from inside Microsoft Word for Mac.  A similar procedure can be done using LibreOffice (https://www.libreoffice.org/download/libreoffice-fresh/) on Linux, Mac, or Windows machines or Microsoft Word on a PC.  You may also have the option to **Save As** a PDF there and you can get to this option by going to **File -> Save As -> File Format: -> PDF** on the Mac if you prefer.
 
 ```{r wordpdf, echo=FALSE, fig.cap="Save as PDF on Mac from Microsoft Word"}
 gif_link("gifs/word_pdf.gif")
