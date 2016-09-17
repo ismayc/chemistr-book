@@ -43,7 +43,7 @@ As I have in the GIF, you should use the R Console to check your results in the 
 
 ### Copying from one chunk into a new chunk
 
-When you are first learning to program, one of the best strategies you can do is to copy working code and make small changes to the code to produce a different result.  In the `plot1` chunk (remember to look at the phrase right after the `{r` and before the comma that begins your R chunk to find the name), you were shown how to produce a scatterplot of `Dependent1` on the vertical axis and `Independent1` on the horizontal axis (frequently written as "a scatterplot of `Dependent1` versus `Independent1`).  In the GIF below, you'll see how we could produce a plot of "log base 10" `Dependent1` versus `Independent1`.  (Remember that you first need to create the log variable.)
+When you are first learning to program, one of the best strategies you can do is to copy working code and make small changes to the code to produce a different result.  In the `plot1` chunk (remember to look at the phrase right after the `{r` and before the comma that begins your R chunk to find the name), you will see how to produce a scatterplot of `Independent1` on the vertical axis and `Dependent1` on the horizontal axis (frequently written as "a scatterplot of `Independent1` versus `Dependent1`---or `y` versus `x`).  In the GIF below, you'll see how we could produce a plot of "log base 10" `Independent1` versus `Dependent1`.  Notice that only a few subtle changes are needed to produce a different plot.  Also think about how the new plot in chunk `plot2` compares to the plot produced in `plot1`.
 
 ```{r , echo=FALSE, fig.cap="Copy chunk and make new plot"}
 gif_link("gifs/log2.gif")
@@ -53,7 +53,7 @@ You'll need to use keyboard shortcuts to copy-and-paste code.  (Ctrl + C on a Wi
 
 ### Regression
 
-Carefully note in the GIF how I have updated the variables to produce a new fit and a new plot.  The `lm` function expects `y ~ x` so make sure you have them in the correct order.  This is used to get the coefficients from a straight line regression fit of the data.  The `summary` function produces a lot of important information about this fit.
+Carefully note in the GIF how I have updated the variables to produce a new fit and a new plot.  The `lm` function expects `y ~ x` so make sure you have them in the correct order.  In other words, you'll want to have your "independent variable" ~ "dependent variable". This is used to get the coefficients from a straight line regression fit of the data.  The `summary` function produces a lot of important information about this fit.
 
 ### The remainder of the lab
 
