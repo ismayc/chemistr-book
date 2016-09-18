@@ -8,7 +8,7 @@
   <title>LeaRning R in ChemistRy at Reed College</title>
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="A help manual for working with RStudio and R Markdown in completing labs for Chem 101/102 at Reed College">
-  <meta name="generator" content="bookdown 0.1 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.1.7 and GitBook 2.6.7">
 
   <meta property="og:title" content="LeaRning R in ChemistRy at Reed College" />
   <meta property="og:type" content="book" />
@@ -25,7 +25,7 @@
 
 <meta name="author" content="Chester Ismay">
 
-<meta name="date" content="2016-09-16">
+<meta name="date" content="2016-09-17">
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -211,7 +211,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <div id="transforming-to-a-logarithmic-scale" class="section level3">
 <h3><span class="header-section-number">2.2.5</span> Transforming to a logarithmic scale</h3>
-<p>We often need to look at data not on our usual scale but instead on a logarithmic scale. With logarithms we specify a base and you may remember from algebra that logarithms are related to exponential functions. In this lab, you’ll be using “log base 10” and the <code>log10</code> function in R. I recommend you enter <code>?log10</code> into the R Console for more information.</p>
+<p>We often need to look at data not on our usual scale but instead on a logarithmic scale. With logarithms we specify a base and you may remember from algebra that logarithms are related to exponential functions. In this lab, you’ll be using “log base 10” and the <code>log10</code> function in R. I recommend you enter <code>?log10</code> into the R Console for more information on how to do a base 10 logarithmic transformation on a vector in R. Additionally, you can find a great explanation of how logarithms are used in the real world <a href="https://betterexplained.com/articles/using-logs-in-the-real-world/">here</a>.</p>
 <p>One of the powerful features of R is its ability to do vectorized calculations. Here is an example:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">my_nums &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">15</span>, <span class="dv">105</span>, <span class="dv">500</span>, <span class="dv">100231</span>)
 <span class="kw">log10</span>(my_nums)</code></pre></div>
@@ -227,7 +227,7 @@ Figure 2.1: Create log10 variable
 </div>
 <div id="copying-from-one-chunk-into-a-new-chunk" class="section level3">
 <h3><span class="header-section-number">2.2.6</span> Copying from one chunk into a new chunk</h3>
-<p>When you are first learning to program, one of the best strategies you can do is to copy working code and make small changes to the code to produce a different result. In the <code>plot1</code> chunk (remember to look at the phrase right after the <code>{r</code> and before the comma that begins your R chunk to find the name), you were shown how to produce a scatterplot of <code>Dependent1</code> on the vertical axis and <code>Independent1</code> on the horizontal axis (frequently written as “a scatterplot of <code>Dependent1</code> versus <code>Independent1</code>). In the GIF below, you’ll see how we could produce a plot of”log base 10&quot; <code>Dependent1</code> versus <code>Independent1</code>. (Remember that you first need to create the log variable.)</p>
+<p>When you are first learning to program, one of the best strategies you can do is to copy working code and make small changes to the code to produce a different result. In the <code>plot1</code> chunk (remember to look at the phrase right after the <code>{r</code> and before the comma that begins your R chunk to find the name), you will see how to produce a scatterplot of <code>Dependent1</code> on the vertical axis and <code>Independent1</code> on the horizontal axis (frequently written as “a scatterplot of <code>Dependent1</code> versus <code>Independent1</code>—or <code>y</code> versus <code>x</code>). In the GIF below, you’ll see how we could produce a plot of the log base 10 of <code>Dependent1</code> versus <code>Independent1</code>. Notice that only a few subtle changes are needed to produce a different plot. Also think about how the new plot in chunk <code>plot2</code> compares to the plot produced in <code>plot1</code>.</p>
 <div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-5"></span>
 <img src="gifs/log2.gif" alt="Copy chunk and make new plot" width="\textwidth" />
 <p class="caption">
@@ -238,7 +238,7 @@ Figure 2.2: Copy chunk and make new plot
 </div>
 <div id="regression" class="section level3">
 <h3><span class="header-section-number">2.2.7</span> Regression</h3>
-<p>Carefully note in the GIF how I have updated the variables to produce a new fit and a new plot. The <code>lm</code> function expects <code>y ~ x</code> so make sure you have them in the correct order. This is used to get the coefficients from a straight line regression fit of the data. The <code>summary</code> function produces a lot of important information about this fit.</p>
+<p>Carefully note in the GIF how I have updated the variables to produce a new fit and a new plot. The <code>lm</code> function expects <code>y ~ x</code> so make sure you have them in the correct order. In other words, you’ll want to have your “dependent variable” ~ “independent variable”. This is used to get the coefficients from a straight line regression fit of the data. The <code>summary</code> function produces a lot of important information about this fit.</p>
 </div>
 <div id="the-remainder-of-the-lab-1" class="section level3">
 <h3><span class="header-section-number">2.2.8</span> The remainder of the lab</h3>
