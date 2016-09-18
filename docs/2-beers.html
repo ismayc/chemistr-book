@@ -8,7 +8,7 @@
   <title>LeaRning R in ChemistRy at Reed College</title>
   <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
   <meta name="description" content="A help manual for working with RStudio and R Markdown in completing labs for Chem 101/102 at Reed College">
-  <meta name="generator" content="bookdown 0.1.7 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.1 and GitBook 2.6.7">
 
   <meta property="og:title" content="LeaRning R in ChemistRy at Reed College" />
   <meta property="og:type" content="book" />
@@ -25,7 +25,7 @@
 
 <meta name="author" content="Chester Ismay">
 
-<meta name="date" content="2016-09-17">
+<meta name="date" content="2016-09-18">
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -211,7 +211,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </div>
 <div id="transforming-to-a-logarithmic-scale" class="section level3">
 <h3><span class="header-section-number">2.2.5</span> Transforming to a logarithmic scale</h3>
-<p>We often need to look at data not on our usual scale but instead on a logarithmic scale. With logarithms we specify a base and you may remember from algebra that logarithms are related to exponential functions. In this lab, you’ll be using “log base 10” and the <code>log10</code> function in R. I recommend you enter <code>?log10</code> into the R Console for more information on how to do a base 10 logarithmic transformation on a vector in R. Additionally, you can find a great explanation of how logarithms are used in the real world <a href="https://betterexplained.com/articles/using-logs-in-the-real-world/">here</a>.</p>
+<p>We often need to look at data not on our usual scale but instead on a logarithmic scale. With logarithms we specify a base and you may remember from algebra that logarithms are related to exponential functions. To further emphasize this, recall that <span class="math inline">\(10^2 = 100\)</span> can be written as <span class="math inline">\(\log_{10}100 = 2\)</span>. It important to note that <span class="math inline">\(log_{10}0 = -\inf\)</span> so you’ll need to be careful with how you handle values of 0 when you calculating a logarithmic function on a vector including 0.</p>
+<p>In this lab, you’ll be using “log base 10” and the <code>log10</code> function in R. I recommend you enter <code>?log10</code> into the R Console for more information on how to do a base 10 logarithmic transformation on a vector in R. Additionally, you can find a great explanation of how logarithms are used in the real world <a href="https://betterexplained.com/articles/using-logs-in-the-real-world/">here</a>.</p>
 <p>One of the powerful features of R is its ability to do vectorized calculations. Here is an example:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">my_nums &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">15</span>, <span class="dv">105</span>, <span class="dv">500</span>, <span class="dv">100231</span>)
 <span class="kw">log10</span>(my_nums)</code></pre></div>

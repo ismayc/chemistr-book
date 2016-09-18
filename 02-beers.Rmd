@@ -24,7 +24,9 @@ After carefully reading over the commented R code Danielle has added providing y
 
 ### Transforming to a logarithmic scale
 
-We often need to look at data not on our usual scale but instead on a logarithmic scale.  With logarithms we specify a base and you may remember from algebra that logarithms are related to exponential functions.  In this lab, you'll be using "log base 10" and the `log10` function in R.  I recommend you enter `?log10` into the R Console for more information on how to do a base 10 logarithmic transformation on a vector in R.  Additionally, you can find a great explanation of how logarithms are used in the real world [here](https://betterexplained.com/articles/using-logs-in-the-real-world/).
+We often need to look at data not on our usual scale but instead on a logarithmic scale.  With logarithms we specify a base and you may remember from algebra that logarithms are related to exponential functions.  To further emphasize this, recall that $10^2 = 100$ can be written as $\log_{10}100 = 2$.  It important to note that $log_{10}0 = -\inf$ so you'll need to be careful with how you handle values of 0 when you calculating a logarithmic function on a vector including 0.
+
+In this lab, you'll be using "log base 10" and the `log10` function in R.  I recommend you enter `?log10` into the R Console for more information on how to do a base 10 logarithmic transformation on a vector in R.  Additionally, you can find a great explanation of how logarithms are used in the real world [here](https://betterexplained.com/articles/using-logs-in-the-real-world/).
 
 One of the powerful features of R is its ability to do vectorized calculations.  Here is an example:
 
