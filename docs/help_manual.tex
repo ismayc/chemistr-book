@@ -112,7 +112,7 @@
 \title{LeaRning R in ChemistRy at Reed College}
 
 \author{Chester Ismay}
-\date{2016-09-18}
+\date{2016-09-20}
 
 \usepackage{booktabs}
 \usepackage{longtable}
@@ -408,7 +408,7 @@ quickly look into your errors.
 \addcontentsline{toc}{subsection}{Book was last updated:}
 
 \begin{verbatim}
-## [1] "By cismay on Sunday, September 18, 2016 16:22:15 PDT"
+## [1] "By cismay on Tuesday, September 20, 2016 00:29:37 PDT"
 \end{verbatim}
 
 \chapter{Lab 1: Light}\label{light}
@@ -750,10 +750,13 @@ We often need to look at data not on our usual scale but instead on a
 logarithmic scale. With logarithms we specify a base and you may
 remember from algebra that logarithms are related to exponential
 functions. To further emphasize this, recall that \(10^2 = 100\) can be
-written as \(\log_{10}100 = 2\). It important to note that
-\(log_{10}0 = -\inf\) so you'll need to be careful with how you handle
-values of 0 when you calculating a logarithmic function on a vector
-including 0.
+written as \(\log_{10}100 = 2\).
+
+It important to note that \(log_{10}0 = -\infty\) so you'll need to be
+careful with how you handle values of 0 when you calculating a
+logarithmic function on a vector including 0. For this lab, you are
+encouraged to remove any 0 values from your vectors BEFORE you take the
+logarithm to avoid this problem.
 
 In this lab, you'll be using ``log base 10'' and the \texttt{log10}
 function in R. I recommend you enter \texttt{?log10} into the R Console
