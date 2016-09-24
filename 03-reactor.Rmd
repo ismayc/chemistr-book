@@ -40,7 +40,7 @@ In `chunk4` you are presented with code to plot two vertical axis numerical vari
 
 ### The remainder of the lab
 
-In the remaining portions of the lab, you are asked to modify the results above to make 4 additional plots.  Additionally, you'll need to provide commentary text below the Discussion header.
+Lastly, you'll need to provide commentary text below the Discussion header following the Exp 3 lab instructions.
 
 ## Note on white space
 
