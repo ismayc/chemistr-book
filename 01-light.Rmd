@@ -53,7 +53,7 @@ Danielle has created lab templates that might not necessarily build without erro
 The `Color` and `WavelengthRange` vectors need to have some values entered. These results will correspond to what you observed in lab.  I will enter some demo results in here and also show you how to use the R Console to check your results.  You'll see that the `Color` and `WavelengthRange` vectors must be of the same length when we create a `data_frame` to combine them together into "spreadsheet" format in the variable named `Q1_data`:
 
 ```{r enterdata, echo=FALSE, fig.cap="Enter values for Color and WavelengthRange"}
-gif_link("gifs/enter_data.gif")
+gif_link("gifs/enter_data_full.gif")
 ```
 
 You should use the R Console to check your results in the R chunks by either entering the R code line by line into the Console or by pressing the **Run Current Chunk** button (the green Play button).  We see here that `Q1_data` is 6 rows by 2 columns and stores our results in "spreadsheet" form as a `data_frame`.
