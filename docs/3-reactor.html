@@ -25,7 +25,7 @@
 
 <meta name="author" content="Chester Ismay">
 
-<meta name="date" content="2016-09-25">
+<meta name="date" content="2016-10-14">
 
 <script type="text/x-mathjax-config">
 MathJax.Hub.Config({
@@ -39,7 +39,7 @@ MathJax.Hub.Config({
   
   
 <link rel="prev" href="2-beers.html">
-<link rel="next" href="A-rstudio-desktop.html">
+<link rel="next" href="4-iron.html">
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -169,6 +169,21 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="3.5" data-path="3-reactor.html"><a href="3-reactor.html#converting-your-word-document-to-pdf-2"><i class="fa fa-check"></i><b>3.5</b> Converting your Word document to PDF</a></li>
 <li class="chapter" data-level="3.6" data-path="3-reactor.html"><a href="3-reactor.html#note-on-requesting-help-1"><i class="fa fa-check"></i><b>3.6</b> Note on requesting help</a></li>
 </ul></li>
+<li class="chapter" data-level="4" data-path="4-iron.html"><a href="4-iron.html"><i class="fa fa-check"></i><b>4</b> Lab 4: Iron</a><ul>
+<li class="chapter" data-level="4.1" data-path="4-iron.html"><a href="4-iron.html#getting-the-r-markdown-lab-template-2"><i class="fa fa-check"></i><b>4.1</b> Getting the R Markdown lab template</a></li>
+<li class="chapter" data-level="4.2" data-path="4-iron.html"><a href="4-iron.html#the-parts-of-the-lab-template-3"><i class="fa fa-check"></i><b>4.2</b> The parts of the lab template</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="4-iron.html"><a href="4-iron.html#yaml-2"><i class="fa fa-check"></i><b>4.2.1</b> YAML</a></li>
+<li class="chapter" data-level="4.2.2" data-path="4-iron.html"><a href="4-iron.html#initial-r-chunk-3"><i class="fa fa-check"></i><b>4.2.2</b> Initial R Chunk</a></li>
+<li class="chapter" data-level="4.2.3" data-path="4-iron.html"><a href="4-iron.html#results-chunk-1"><i class="fa fa-check"></i><b>4.2.3</b> Results chunk</a></li>
+<li class="chapter" data-level="4.2.4" data-path="4-iron.html"><a href="4-iron.html#plot-chunk"><i class="fa fa-check"></i><b>4.2.4</b> Plot chunk</a></li>
+<li class="chapter" data-level="4.2.5" data-path="4-iron.html"><a href="4-iron.html#calculations"><i class="fa fa-check"></i><b>4.2.5</b> Calculations</a></li>
+<li class="chapter" data-level="4.2.6" data-path="4-iron.html"><a href="4-iron.html#the-remainder-of-the-lab-3"><i class="fa fa-check"></i><b>4.2.6</b> The remainder of the lab</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="4-iron.html"><a href="4-iron.html#note-on-white-space-3"><i class="fa fa-check"></i><b>4.3</b> Note on white space</a></li>
+<li class="chapter" data-level="4.4" data-path="4-iron.html"><a href="4-iron.html#spell-check-3"><i class="fa fa-check"></i><b>4.4</b> Spell-check</a></li>
+<li class="chapter" data-level="4.5" data-path="4-iron.html"><a href="4-iron.html#converting-your-word-document-to-pdf-3"><i class="fa fa-check"></i><b>4.5</b> Converting your Word document to PDF</a></li>
+<li class="chapter" data-level="4.6" data-path="4-iron.html"><a href="4-iron.html#note-on-requesting-help-2"><i class="fa fa-check"></i><b>4.6</b> Note on requesting help</a></li>
+</ul></li>
 <li class="appendix"><span><b>Appendix</b></span></li>
 <li class="chapter" data-level="A" data-path="A-rstudio-desktop.html"><a href="A-rstudio-desktop.html"><i class="fa fa-check"></i><b>A</b> RStudio Desktop</a><ul>
 <li class="chapter" data-level="A.1" data-path="A-rstudio-desktop.html"><a href="A-rstudio-desktop.html#downloading-r-and-rstudio-desktop"><i class="fa fa-check"></i><b>A.1</b> Downloading R and RStudio Desktop</a></li>
@@ -205,7 +220,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h1><span class="header-section-number">3</span> Lab 3: Reactor</h1>
 <div id="getting-the-r-markdown-lab-template-1" class="section level2">
 <h2><span class="header-section-number">3.1</span> Getting the R Markdown lab template</h2>
-<p>Begin by creating a new folder called <code>Lab3-Reactor</code> in your <code>CHEM101_FirstnameLastname</code> folder. Next, follow steps similar to those found in the GIF in <a href="1-light.html#getting-the-lab-template">Section 1.1</a>, but select the <strong>Reactor </strong> R Markdown template instead of <strong>Light</strong> and save your file in the newly created <code>Lab3-Reactor</code> folder as <code>lab3.Rmd</code>.</p>
+<p>Begin by creating a new folder called <code>Lab3-Reactor</code> in your <code>CHEM101_FirstnameLastname</code> folder. Next, follow steps similar to those found in the GIF in <a href="1-light.html#getting-the-lab-template">Section 1.1</a>, but select the <strong>Reactor</strong> R Markdown template instead of <strong>Light</strong> and save your file in the newly created <code>Lab3-Reactor</code> folder as <code>lab3.Rmd</code>.</p>
 </div>
 <div id="the-parts-of-the-lab-template-2" class="section level2">
 <h2><span class="header-section-number">3.2</span> The parts of the lab template</h2>
@@ -276,16 +291,13 @@ Figure 3.2: Save as PDF on Mac from Microsoft Word
 
 </div>
 </div>
-
-
-
             </section>
 
           </div>
         </div>
       </div>
 <a href="2-beers.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="A-rstudio-desktop.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
+<a href="4-iron.html" class="navigation navigation-next " aria-label="Next page""><i class="fa fa-angle-right"></i></a>
 
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/lunr.js"></script>

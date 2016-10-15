@@ -51,6 +51,15 @@
 }
 
 
+\renewcommand{\subsubsection}{\ttl@straightclass{subsubsection}}
+\makeatother
+\titleformat{\subsubsection}[hang]
+  {\fontsize{36}{42}\selectfont}
+  {\thesubsubsection}
+  {1em}
+  {}
+  []
+
 %%
 % The back matter contains appendices, indices, glossaries, endnotes,
 % biliographies, list of contributors, illustration credits, etc.

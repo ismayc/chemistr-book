@@ -2,7 +2,7 @@
 
 ## Getting the R Markdown lab template
 
-Begin by creating a new folder called `Lab3-Reactor` in your `CHEM101_FirstnameLastname` folder. Next, follow steps similar to those found in the GIF in [Section 1.1][Getting the lab template], but select the **Reactor ** R Markdown template instead of **Light** and save your file in the newly created `Lab3-Reactor` folder as `lab3.Rmd`.
+Begin by creating a new folder called `Lab3-Reactor` in your `CHEM101_FirstnameLastname` folder. Next, follow steps similar to those found in the GIF in [Section 1.1][Getting the lab template], but select the **Reactor** R Markdown template instead of **Light** and save your file in the newly created `Lab3-Reactor` folder as `lab3.Rmd`.
 
 ## The parts of the lab template
 
@@ -79,4 +79,3 @@ knitr::include_graphics("screenshots/shareproj2.png")
 ```
 
 The link is given in the **Project URL**.  Please copy this entire link into the body of your emails to Danielle or I so that we can quickly look into your errors.
-
