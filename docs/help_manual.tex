@@ -111,8 +111,8 @@
 % title / author / date
 \title{LeaRning R in ChemistRy at Reed College}
 
-\author{Chester Ismay}
-\date{2016-10-14}
+\author{Chester Ismay and Danielle Cass}
+\date{2017-06-08}
 
 \usepackage{booktabs}
 \usepackage{longtable}
@@ -182,6 +182,17 @@
   marginparwidth=8pc % width of margin notes
 }
 
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{corollary}{Corollary}[chapter]
+\newtheorem{proposition}{Proposition}[chapter]
+\theoremstyle{definition}
+\newtheorem{example}{Example}[chapter]
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
 \begin{document}
 
 %\let\allcaps=\relax
@@ -408,7 +419,7 @@ quickly look into your errors.
 \addcontentsline{toc}{subsection}{Book was last updated:}
 
 \begin{verbatim}
-## [1] "By cismay on Friday, October 14, 2016 17:21:35 PDT"
+## [1] "By dcass on Thursday, June 08, 2017 02:08:56 PM PDT"
 \end{verbatim}
 
 \chapter{Lab 1: Light}\label{light}
@@ -1307,7 +1318,7 @@ dates given.
 \chapter{Lab 1: Light (More Details)}\label{appendix-light}
 
 \section{\texorpdfstring{The \texttt{chem\_table}
-function}{The chem\_table function}}\label{the-chem_table-function}
+function}{The chem\_table function}}\label{the-chemux5ftable-function}
 
 The \texttt{chem\_table} function is essentially a wrapper function to
 the \texttt{pandoc.table} function in the \texttt{pander} package. Here
@@ -1361,7 +1372,7 @@ specifies that an extra line of white space will be printed immediately
 following the table.
 
 \section{\texorpdfstring{The \texttt{include\_graphics}
-function}{The include\_graphics function}}\label{the-include_graphics-function}
+function}{The include\_graphics function}}\label{the-includeux5fgraphics-function}
 
 The \texttt{include\_graphics} function enables you to include pictures
 that are stored as image files (\texttt{*.png} or \texttt{*.jpg}, for
