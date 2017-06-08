@@ -41,7 +41,7 @@ gif_link <- function(path, latex = knitr:::is_latex_output()){
 
 In the HTML version of this book, you can also download the PDF version of the book by clicking on PDF button in the top toolbar of the page.  HTML is the preferred format but the PDF format may be preferred for some readers.  Links to the different GIFs directly found in the HTML version are provided in the PDF version.
 
-This resource is designed to assist students in CHEM 101/102 in using RStudio and R Markdown to complete their labs.  (A more general reference to the specifics of R, RStudio and R Markdown is available in a different free book [here](http://ismayc.github.io/rbasics-book) [@usedtor2016]).  This resource will show you GIFs explaining how to do some common procedures you'll need to do to complete labs.  In addition, it will provide more details about the specifics of the different lab templates available in the `chemistr` R package.  Each chapter of this book will correspond to each of the different labs.  
+This resource is designed to assist students in CHEM 101/102 in using RStudio and R Markdown to complete their labs.  (A more general reference to the specifics of R, RStudio and R Markdown is available in a different free book [here](http://ismayc.github.io/rbasics-book) [@1]).  This resource will show you GIFs explaining how to do some common procedures you'll need to do to complete labs.  In addition, it will provide more details about the specifics of the different lab templates available in the `chemistr` R package.  Each chapter of this book will correspond to each of the different labs.  
 
 Lastly, if you are interested, you'll find instructions on how to complete the labs using RStudio Desktop instead of the RStudio Server in the Appendix.  The Appendix will also include descriptions of the code that is sitting "behind the scenes" in many of the functions created in the `chemistr` package:  `chem_table`, `chem_scatter`, `chem_clustered.bar`, etc.  These functions were written to ease a beginner into working with R.  Those interested in customizing their lab reports further should look over the R code in the Appendix.  Additionally, many of the needed packages are automatically loaded when the `chemistr` package is loaded using `library(chemistr)`.  You'll see how each of these packages is used in the Appendix.
 
@@ -50,6 +50,8 @@ If further clarification is needed on any other aspect of the book, please email
 This book will evolve and be updated as needed based on feedback.  You can always check the date at the end of the chapter to see when the book was last updated.  It is recommended that you use Google Chrome as your browser since GIFs sometimes do not load automatically with other browsers.
 
 ## Starting the labs {-}
+
+<!--The {-} function is for making the chapter not numbered -->
 
 ### Logging in and initial screen {-}
 

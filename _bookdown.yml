@@ -1,3 +1,4 @@
 book_filename: "help_manual"
 output_dir: "docs"
 #chapter_name: "Chapter "
+#book_file tells the name of the PDF file of the website.  It can be changed but the output_dir can not
