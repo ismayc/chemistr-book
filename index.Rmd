@@ -1,6 +1,6 @@
 --- 
 title: "LeaRning R in ChemistRy at Reed College"
-author: "Chester Ismay"
+author: "Chester Ismay and Danielle Cass"
 date: "`r Sys.Date()`"
 knit: bookdown::render_book
 site: bookdown::bookdown_site
