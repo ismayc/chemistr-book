@@ -5,7 +5,11 @@ Imports:
   bookdown,
   dplyr, 
   ggplot2,
-  
+  xtable,
+  knitr,
+  pander
+Suggests:
+  readr
 Remotes: 
   rstudio/bookdown,
   ismayc/chemistr
