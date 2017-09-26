@@ -13,7 +13,7 @@ script:
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: $GITHUB_PAT
+  github_token: $GITHUB_PAT2
   repo: ismayc/chemistr-book
   target_branch: gh-pages
   local_dir: docs
