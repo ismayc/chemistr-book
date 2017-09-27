@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>LeaRning R in ChemistRy at Reed College</title>
+  <meta name="description" content="A help manual for working with RStudio and R Markdown in completing labs for Chem 101/102 at Reed College">
+  <meta name="generator" content="bookdown 0.5.2 and GitBook 2.6.7">
+
+  <meta property="og:title" content="LeaRning R in ChemistRy at Reed College" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="A help manual for working with RStudio and R Markdown in completing labs for Chem 101/102 at Reed College" />
+  <meta name="github-repo" content="ismayc/chemistr-book" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="LeaRning R in ChemistRy at Reed College" />
+  
+  <meta name="twitter:description" content="A help manual for working with RStudio and R Markdown in completing labs for Chem 101/102 at Reed College" />
+  
+
+<meta name="author" content="Danielle Cass, Chester Ismay, and ITS at Reed">
+
+
+<meta name="date" content="2017-09-27">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  
+<link rel="prev" href="1-light.html">
+<link rel="next" href="3-reactor.html">
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./"></a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Introduction</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#what-is-this"><i class="fa fa-check"></i>What is this?</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#starting-the-labs"><i class="fa fa-check"></i>Starting the labs</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#logging-in-and-initial-screen"><i class="fa fa-check"></i>Logging in and initial screen</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#creating-and-sharing-projects-using-rstudio-server"><i class="fa fa-check"></i>Creating and Sharing Projects using RStudio Server</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#dont-overwrite-the-rproj-file"><i class="fa fa-check"></i>Don’t overwrite the Rproj file!</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#requesting-help"><i class="fa fa-check"></i>Requesting help</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#book-was-last-updated"><i class="fa fa-check"></i>Book was last updated:</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="1-light.html"><a href="1-light.html"><i class="fa fa-check"></i><b>1</b> Lab 1: Light</a><ul>
+<li class="chapter" data-level="1.1" data-path="1-light.html"><a href="1-light.html#getting-the-lab-template"><i class="fa fa-check"></i><b>1.1</b> Getting the lab template</a></li>
+<li class="chapter" data-level="1.2" data-path="1-light.html"><a href="1-light.html#the-parts-of-the-lab-template"><i class="fa fa-check"></i><b>1.2</b> The parts of the lab template</a><ul>
+<li class="chapter" data-level="1.2.1" data-path="1-light.html"><a href="1-light.html#the-yaml-header"><i class="fa fa-check"></i><b>1.2.1</b> The YAML header</a></li>
+<li class="chapter" data-level="1.2.2" data-path="1-light.html"><a href="1-light.html#initial-r-chunk"><i class="fa fa-check"></i><b>1.2.2</b> Initial R Chunk</a></li>
+<li class="chapter" data-level="1.2.3" data-path="1-light.html"><a href="1-light.html#headers"><i class="fa fa-check"></i><b>1.2.3</b> Headers</a></li>
+<li class="chapter" data-level="1.2.4" data-path="1-light.html"><a href="1-light.html#enter-data-chunk"><i class="fa fa-check"></i><b>1.2.4</b> Enter data chunk</a></li>
+<li class="chapter" data-level="1.2.5" data-path="1-light.html"><a href="1-light.html#a-nice-table-r-chunk"><i class="fa fa-check"></i><b>1.2.5</b> A nice table R chunk</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="1-light.html"><a href="1-light.html#uploading-and-inserting-external-pictures"><i class="fa fa-check"></i><b>1.3</b> Uploading and inserting external pictures</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="1-light.html"><a href="1-light.html#the-remainder-of-the-lab"><i class="fa fa-check"></i><b>1.3.1</b> The remainder of the lab</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="1-light.html"><a href="1-light.html#note-on-white-space"><i class="fa fa-check"></i><b>1.4</b> Note on white space</a></li>
+<li class="chapter" data-level="1.5" data-path="1-light.html"><a href="1-light.html#spell-check"><i class="fa fa-check"></i><b>1.5</b> Spell-check</a></li>
+<li class="chapter" data-level="1.6" data-path="1-light.html"><a href="1-light.html#converting-your-word-document-to-pdf"><i class="fa fa-check"></i><b>1.6</b> Converting your Word document to PDF</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="2-beers.html"><a href="2-beers.html"><i class="fa fa-check"></i><b>2</b> Lab 2: Beer’s Law</a><ul>
+<li class="chapter" data-level="2.1" data-path="2-beers.html"><a href="2-beers.html#getting-the-r-markdown-lab-template"><i class="fa fa-check"></i><b>2.1</b> Getting the R Markdown lab template</a></li>
+<li class="chapter" data-level="2.2" data-path="2-beers.html"><a href="2-beers.html#the-parts-of-the-lab-template-1"><i class="fa fa-check"></i><b>2.2</b> The parts of the lab template</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="2-beers.html"><a href="2-beers.html#yaml"><i class="fa fa-check"></i><b>2.2.1</b> YAML</a></li>
+<li class="chapter" data-level="2.2.2" data-path="2-beers.html"><a href="2-beers.html#initial-r-chunk-1"><i class="fa fa-check"></i><b>2.2.2</b> Initial R Chunk</a></li>
+<li class="chapter" data-level="2.2.3" data-path="2-beers.html"><a href="2-beers.html#directions-chunk"><i class="fa fa-check"></i><b>2.2.3</b> Directions chunk</a></li>
+<li class="chapter" data-level="2.2.4" data-path="2-beers.html"><a href="2-beers.html#first-data-chunk"><i class="fa fa-check"></i><b>2.2.4</b> First data chunk</a></li>
+<li class="chapter" data-level="2.2.5" data-path="2-beers.html"><a href="2-beers.html#transforming-to-a-logarithmic-scale"><i class="fa fa-check"></i><b>2.2.5</b> Transforming to a logarithmic scale</a></li>
+<li class="chapter" data-level="2.2.6" data-path="2-beers.html"><a href="2-beers.html#copying-from-one-chunk-into-a-new-chunk"><i class="fa fa-check"></i><b>2.2.6</b> Copying from one chunk into a new chunk</a></li>
+<li class="chapter" data-level="2.2.7" data-path="2-beers.html"><a href="2-beers.html#regression"><i class="fa fa-check"></i><b>2.2.7</b> Regression</a></li>
+<li class="chapter" data-level="2.2.8" data-path="2-beers.html"><a href="2-beers.html#the-remainder-of-the-lab-1"><i class="fa fa-check"></i><b>2.2.8</b> The remainder of the lab</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="2-beers.html"><a href="2-beers.html#note-on-white-space-1"><i class="fa fa-check"></i><b>2.3</b> Note on white space</a></li>
+<li class="chapter" data-level="2.4" data-path="2-beers.html"><a href="2-beers.html#spell-check-1"><i class="fa fa-check"></i><b>2.4</b> Spell-check</a></li>
+<li class="chapter" data-level="2.5" data-path="2-beers.html"><a href="2-beers.html#converting-your-word-document-to-pdf-1"><i class="fa fa-check"></i><b>2.5</b> Converting your Word document to PDF</a></li>
+<li class="chapter" data-level="2.6" data-path="2-beers.html"><a href="2-beers.html#note-on-requesting-help"><i class="fa fa-check"></i><b>2.6</b> Note on requesting help</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="3-reactor.html"><a href="3-reactor.html"><i class="fa fa-check"></i><b>3</b> Lab 3: Reactor</a><ul>
+<li class="chapter" data-level="3.1" data-path="3-reactor.html"><a href="3-reactor.html#getting-the-r-markdown-lab-template-1"><i class="fa fa-check"></i><b>3.1</b> Getting the R Markdown lab template</a></li>
+<li class="chapter" data-level="3.2" data-path="3-reactor.html"><a href="3-reactor.html#the-parts-of-the-lab-template-2"><i class="fa fa-check"></i><b>3.2</b> The parts of the lab template</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="3-reactor.html"><a href="3-reactor.html#yaml-1"><i class="fa fa-check"></i><b>3.2.1</b> YAML</a></li>
+<li class="chapter" data-level="3.2.2" data-path="3-reactor.html"><a href="3-reactor.html#initial-r-chunk-2"><i class="fa fa-check"></i><b>3.2.2</b> Initial R Chunk</a></li>
+<li class="chapter" data-level="3.2.3" data-path="3-reactor.html"><a href="3-reactor.html#results-chunk"><i class="fa fa-check"></i><b>3.2.3</b> Results chunk</a></li>
+<li class="chapter" data-level="3.2.4" data-path="3-reactor.html"><a href="3-reactor.html#clustered-bar-graph-chunk"><i class="fa fa-check"></i><b>3.2.4</b> Clustered bar graph chunk</a></li>
+<li class="chapter" data-level="3.2.5" data-path="3-reactor.html"><a href="3-reactor.html#part-b-data-entry"><i class="fa fa-check"></i><b>3.2.5</b> Part B data entry</a></li>
+<li class="chapter" data-level="3.2.6" data-path="3-reactor.html"><a href="3-reactor.html#dual-scatter-plot"><i class="fa fa-check"></i><b>3.2.6</b> Dual scatter plot</a></li>
+<li class="chapter" data-level="3.2.7" data-path="3-reactor.html"><a href="3-reactor.html#the-remainder-of-the-lab-2"><i class="fa fa-check"></i><b>3.2.7</b> The remainder of the lab</a></li>
+</ul></li>
+<li class="chapter" data-level="3.3" data-path="3-reactor.html"><a href="3-reactor.html#note-on-white-space-2"><i class="fa fa-check"></i><b>3.3</b> Note on white space</a></li>
+<li class="chapter" data-level="3.4" data-path="3-reactor.html"><a href="3-reactor.html#spell-check-2"><i class="fa fa-check"></i><b>3.4</b> Spell-check</a></li>
+<li class="chapter" data-level="3.5" data-path="3-reactor.html"><a href="3-reactor.html#converting-your-word-document-to-pdf-2"><i class="fa fa-check"></i><b>3.5</b> Converting your Word document to PDF</a></li>
+<li class="chapter" data-level="3.6" data-path="3-reactor.html"><a href="3-reactor.html#note-on-requesting-help-1"><i class="fa fa-check"></i><b>3.6</b> Note on requesting help</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="4-iron.html"><a href="4-iron.html"><i class="fa fa-check"></i><b>4</b> Lab 4: Iron</a><ul>
+<li class="chapter" data-level="4.1" data-path="4-iron.html"><a href="4-iron.html#getting-the-r-markdown-lab-template-2"><i class="fa fa-check"></i><b>4.1</b> Getting the R Markdown lab template</a></li>
+<li class="chapter" data-level="4.2" data-path="4-iron.html"><a href="4-iron.html#the-parts-of-the-lab-template-3"><i class="fa fa-check"></i><b>4.2</b> The parts of the lab template</a><ul>
+<li class="chapter" data-level="4.2.1" data-path="4-iron.html"><a href="4-iron.html#yaml-2"><i class="fa fa-check"></i><b>4.2.1</b> YAML</a></li>
+<li class="chapter" data-level="4.2.2" data-path="4-iron.html"><a href="4-iron.html#initial-r-chunk-3"><i class="fa fa-check"></i><b>4.2.2</b> Initial R Chunk</a></li>
+<li class="chapter" data-level="4.2.3" data-path="4-iron.html"><a href="4-iron.html#results-chunk-1"><i class="fa fa-check"></i><b>4.2.3</b> Results chunk</a></li>
+<li class="chapter" data-level="4.2.4" data-path="4-iron.html"><a href="4-iron.html#plot-chunk"><i class="fa fa-check"></i><b>4.2.4</b> Plot chunk</a></li>
+<li class="chapter" data-level="4.2.5" data-path="4-iron.html"><a href="4-iron.html#calculations"><i class="fa fa-check"></i><b>4.2.5</b> Calculations</a></li>
+<li class="chapter" data-level="4.2.6" data-path="4-iron.html"><a href="4-iron.html#the-remainder-of-the-lab-3"><i class="fa fa-check"></i><b>4.2.6</b> The remainder of the lab</a></li>
+</ul></li>
+<li class="chapter" data-level="4.3" data-path="4-iron.html"><a href="4-iron.html#note-on-white-space-3"><i class="fa fa-check"></i><b>4.3</b> Note on white space</a></li>
+<li class="chapter" data-level="4.4" data-path="4-iron.html"><a href="4-iron.html#spell-check-3"><i class="fa fa-check"></i><b>4.4</b> Spell-check</a></li>
+<li class="chapter" data-level="4.5" data-path="4-iron.html"><a href="4-iron.html#converting-your-word-document-to-pdf-3"><i class="fa fa-check"></i><b>4.5</b> Converting your Word document to PDF</a></li>
+<li class="chapter" data-level="4.6" data-path="4-iron.html"><a href="4-iron.html#note-on-requesting-help-2"><i class="fa fa-check"></i><b>4.6</b> Note on requesting help</a></li>
+</ul></li>
+<li class="appendix"><span><b>Appendix</b></span></li>
+<li class="chapter" data-level="A" data-path="A-rstudio-desktop.html"><a href="A-rstudio-desktop.html"><i class="fa fa-check"></i><b>A</b> RStudio Desktop</a><ul>
+<li class="chapter" data-level="A.1" data-path="A-rstudio-desktop.html"><a href="A-rstudio-desktop.html#downloading-r-and-rstudio-desktop"><i class="fa fa-check"></i><b>A.1</b> Downloading R and RStudio Desktop</a></li>
+<li class="chapter" data-level="A.2" data-path="A-rstudio-desktop.html"><a href="A-rstudio-desktop.html#downloading-and-installing-chemistr"><i class="fa fa-check"></i><b>A.2</b> Downloading and installing chemistr</a></li>
+</ul></li>
+<li class="chapter" data-level="B" data-path="B-appendix-light.html"><a href="B-appendix-light.html"><i class="fa fa-check"></i><b>B</b> Lab 1: Light (More Details)</a><ul>
+<li class="chapter" data-level="B.1" data-path="B-appendix-light.html"><a href="B-appendix-light.html#the-chem_table-function"><i class="fa fa-check"></i><b>B.1</b> The <code>chem_table</code> function</a></li>
+<li class="chapter" data-level="B.2" data-path="B-appendix-light.html"><a href="B-appendix-light.html#the-include_graphics-function"><i class="fa fa-check"></i><b>B.2</b> The <code>include_graphics</code> function</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+<li><a href="https://github.com/ismayc/chemistr-book/issues" target="blank">Create a GitHub Issue</a></li>
+<li><a href="mailto:dcass@reed.edu" target="blank">Email Danielle</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">LeaRning R in ChemistRy at Reed College</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="beers" class="section level1">
+<h1><span class="header-section-number">2</span> Lab 2: Beer’s Law</h1>
+<div id="getting-the-r-markdown-lab-template" class="section level2">
+<h2><span class="header-section-number">2.1</span> Getting the R Markdown lab template</h2>
+<p>Begin by creating a new folder called <code>Lab2-Beers</code> in your <code>CHEM101_FirstnameLastname</code> folder. Next, follow steps similar to those found in the GIF in <a href="1-light.html#getting-the-lab-template">Section 1.1</a>, but select the <strong>Beer’s Law</strong> R Markdown template instead of <strong>Light</strong> and save your file in the newly created <code>Lab2-Beers</code> folder as <code>lab2.Rmd</code>.</p>
+</div>
+<div id="the-parts-of-the-lab-template-1" class="section level2">
+<h2><span class="header-section-number">2.2</span> The parts of the lab template</h2>
+<div id="yaml" class="section level3">
+<h3><span class="header-section-number">2.2.1</span> YAML</h3>
+<p>Refer back to <a href="1-light.html#the-yaml-header">The YAML header</a> section in Chapter <a href="1-light.html#light">1</a> for a review on what the entries here mean. Remember to be careful with spacing!</p>
+</div>
+<div id="initial-r-chunk-1" class="section level3">
+<h3><span class="header-section-number">2.2.2</span> Initial R Chunk</h3>
+<p>Remember that the <code>chemistr</code> package automatically loads in many useful packages for you. It also includes functions such as <code>chem_table</code> you worked with in Lab 1 and <code>chem_scatter</code> that you will work with in this lab.</p>
+</div>
+<div id="directions-chunk" class="section level3">
+<h3><span class="header-section-number">2.2.3</span> Directions chunk</h3>
+<p>Immediately after the <code>## Data</code> header, you’ll see a chunk of commented R code Danielle has including giving you directions on what the chunks after it should include. Note that this chunk again uses <code>include=FALSE</code> so you won’t see any of this in the resulting knitted DOCX file.</p>
+</div>
+<div id="first-data-chunk" class="section level3">
+<h3><span class="header-section-number">2.2.4</span> First data chunk</h3>
+<p>After carefully reading over the commented R code Danielle has added providing you with directions, you now are ready to enter values in for Part A. Note that you can change the variable names from <code>Independent1</code> and <code>Dependent1</code> to something else, but remember that those names cannot include spaces or other mathematical objects. Remember that if you change the name of <code>Independent1</code> to, say, <code>my_indep</code> that you’ll need to make sure to change all references from <code>Independent1</code> to <code>my_indep</code> in the R code that follows.</p>
+</div>
+<div id="transforming-to-a-logarithmic-scale" class="section level3">
+<h3><span class="header-section-number">2.2.5</span> Transforming to a logarithmic scale</h3>
+<p>We often need to look at data not on our usual scale but instead on a logarithmic scale. With logarithms we specify a base and you may remember from algebra that logarithms are related to exponential functions. To further emphasize this, recall that <span class="math inline">\(10^2 = 100\)</span> can be written as <span class="math inline">\(\log_{10}100 = 2\)</span>.</p>
+<p>It important to note that <span class="math inline">\(log_{10}0 = -\infty\)</span> so you’ll need to be careful with how you handle values of 0 when you calculating a logarithmic function on a vector including 0. For this lab, you are encouraged to remove any 0 values from your vectors BEFORE you take the logarithm to avoid this problem.</p>
+<p>In this lab, you’ll be using “log base 10” and the <code>log10</code> function in R. I recommend you enter <code>?log10</code> into the R Console for more information on how to do a base 10 logarithmic transformation on a vector in R. Additionally, you can find a great explanation of how logarithms are used in the real world <a href="https://betterexplained.com/articles/using-logs-in-the-real-world/">here</a>.</p>
+<p>One of the powerful features of R is its ability to do vectorized calculations. Here is an example:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">my_nums &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">10</span>, <span class="dv">15</span>, <span class="dv">105</span>, <span class="dv">500</span>, <span class="dv">100231</span>)
+<span class="kw">log10</span>(my_nums)</code></pre></div>
+<pre><code>## [1] 1.000000 1.176091 2.021189 2.698970 5.001002</code></pre>
+<p>The code above produces the “log base 10” for each of the values in <code>my_nums</code>. We haven’t assigned this to anything though since we didn’t include the assignment operator <code>&lt;-</code>. In the GIF below, I’ll show you how to create one of the two new variables you’ll need to create. Remember that you’ll also need to update your <code>data_frame</code> call to include both of your newly created variables as well.</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-4"></span>
+<img src="gifs/log.gif" alt="Create log10 variable" width="\textwidth" />
+<p class="caption">
+Figure 2.1: Create log10 variable
+</p>
+</div>
+<p>As I have in the GIF, you should use the R Console to check your results in the R chunks by either entering the R code line by line into the Console or by pressing the <strong>Run Current Chunk</strong> button (the green Play button).</p>
+</div>
+<div id="copying-from-one-chunk-into-a-new-chunk" class="section level3">
+<h3><span class="header-section-number">2.2.6</span> Copying from one chunk into a new chunk</h3>
+<p>When you are first learning to program, one of the best strategies you can do is to copy working code and make small changes to the code to produce a different result. In the <code>plot1</code> chunk (remember to look at the phrase right after the <code>{r</code> and before the comma that begins your R chunk to find the name), you will see how to produce a scatterplot of <code>Dependent1</code> on the vertical axis and <code>Independent1</code> on the horizontal axis (frequently written as “a scatterplot of <code>Dependent1</code> versus <code>Independent1</code>—or <code>y</code> versus <code>x</code>). In the GIF below, you’ll see how we could produce a plot of the log base 10 of <code>Dependent1</code> versus <code>Independent1</code>. Notice that only a few subtle changes are needed to produce a different plot. Also think about how the new plot in chunk <code>plot2</code> compares to the plot produced in <code>plot1</code>.</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-5"></span>
+<img src="gifs/log2.gif" alt="Copy chunk and make new plot" width="\textwidth" />
+<p class="caption">
+Figure 2.2: Copy chunk and make new plot
+</p>
+</div>
+<p>You’ll need to use keyboard shortcuts to copy-and-paste code. (Ctrl + C on a Windows machine or Command + C on a Mac to copy. Then use Ctrl + V on a Windows machine or Command + V on a Mac to paste.)</p>
+</div>
+<div id="regression" class="section level3">
+<h3><span class="header-section-number">2.2.7</span> Regression</h3>
+<p>Carefully note in the GIF how I have updated the variables to produce a new fit and a new plot. The <code>lm</code> function expects <code>y ~ x</code> so make sure you have them in the correct order. In other words, you’ll want to have your “dependent variable” ~ “independent variable”. This is used to get the coefficients from a straight line regression fit of the data. The <code>summary</code> function produces a lot of important information about this fit.</p>
+</div>
+<div id="the-remainder-of-the-lab-1" class="section level3">
+<h3><span class="header-section-number">2.2.8</span> The remainder of the lab</h3>
+<p>In the remaining portions of the lab, you are asked to modify the results above to make 4 additional plots. Additionally, you’ll need to provide commentary text below the Discussion header.</p>
+</div>
+</div>
+<div id="note-on-white-space-1" class="section level2">
+<h2><span class="header-section-number">2.3</span> Note on white space</h2>
+<p>As you look over the R Markdown document you’ll see that there is always a new line of white space between the discussion and the R chunks and also between each of the R chunks. It is highly recommended that you also follow this workflow. You’ll receive some strange errors at times if you try to stack everything together and it’s also much harder to follow for another reader of your document if you have everything bunched together. <strong>White space is your friend!</strong></p>
+</div>
+<div id="spell-check-1" class="section level2">
+<h2><span class="header-section-number">2.4</span> Spell-check</h2>
+<p>Just as I’m sure your English teachers have told you to spell check your documents before submitting, you are also encouraged to do so here. There is a built-in spell check option found near the <strong>Knit</strong> button.</p>
+<p><img src="images/spellcheck.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<p><img src="images/spellcheck.png" width="0.3\textwidth" style="display: block; margin: auto;" /></p>
+<p>Please run this and carefully read over your lab report before converting it to a PDF and submitting it to Moodle.</p>
+</div>
+<div id="converting-your-word-document-to-pdf-1" class="section level2">
+<h2><span class="header-section-number">2.5</span> Converting your Word document to PDF</h2>
+<p>The directions for each lab on Moodle say to upload a PDF version of your lab. You’ll see how to create this PDF from inside Microsoft Word for Mac. A similar procedure can be done using LibreOffice (<a href="https://www.libreoffice.org/download/libreoffice-fresh/" class="uri">https://www.libreoffice.org/download/libreoffice-fresh/</a>) on Linux, Mac, or Windows machines or Microsoft Word on a PC. You may also have the option to <strong>Save As</strong> a PDF there and you can get to this option by going to <strong>File -&gt; Save As -&gt; File Format: -&gt; PDF</strong> on the Mac if you prefer.</p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-7"></span>
+<img src="gifs/word_pdf.gif" alt="Save as PDF on Mac from Microsoft Word" width="\textwidth" />
+<p class="caption">
+Figure 2.3: Save as PDF on Mac from Microsoft Word
+</p>
+</div>
+</div>
+<div id="note-on-requesting-help" class="section level2">
+<h2><span class="header-section-number">2.6</span> Note on requesting help</h2>
+<p>It is extremely helpful for us if you can share a link to your RStudio Project in any emails requesting help. This link is available by going to your RStudio project in the top right corner of RStudio, clicking on it and then selecting <strong>Share Project</strong>, and then select <strong>Sharing</strong> as seen in the screenshots below.</p>
+<p><img src="screenshots/shareproj1.png" width="\textwidth" style="display: block; margin: auto;" /></p>
+<p><img src="screenshots/shareproj2.png" width="60%" style="display: block; margin: auto;" /></p>
+<p>The link is given in the <strong>Project URL</strong>. Please copy this entire link into the body of your emails to Danielle or I so that we can quickly look into your errors.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="1-light.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="3-reactor.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"google": false,
+"weibo": false,
+"instapper": false,
+"vk": false,
+"all": ["facebook", "google", "twitter", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/ismayc/chemistr-book/edit/master/02-beers.Rmd",
+"text": "Edit"
+},
+"download": null,
+"toc": {
+"collapse": "section",
+"scroll_highlight": true
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://cdn.bootcss.com/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:" && /^https?:/.test(script.src))
+      script.src  = script.src.replace(/^https?:/, '');
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
