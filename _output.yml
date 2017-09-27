@@ -10,7 +10,7 @@ bookdown::gitbook:
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
         <li><a href="https://github.com/ismayc/chemistr-book/issues" target="blank">Create a GitHub Issue</a></li>
-        <li><a href="mailto:chester.ismay@gmail.com" target="blank">Email Chester</a></li>
+        <li><a href="mailto:dcass@reed.edu" target="blank">Email Danielle</a></li>
     edit:
       link: https://github.com/ismayc/chemistr-book/edit/master/%s
 bookdown::pdf_book:
