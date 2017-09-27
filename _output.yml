@@ -13,16 +13,16 @@ bookdown::gitbook:
         <li><a href="mailto:dcass@reed.edu" target="blank">Email Danielle</a></li>
     edit:
       link: https://github.com/ismayc/chemistr-book/edit/master/%s
-bookdown::pdf_book:
-  base_format: tufte::tufte_book
-  template: tufte-handout.tex
-  includes:
-    in_header: preamble.tex
-  latex_engine: xelatex
-  citation_package: natbib
-  keep_tex: true
-  fig_width: 7
-  fig_height: 4
-  highlight: tango
+#bookdown::pdf_book:
+#  base_format: tufte::tufte_book
+#  template: tufte-handout.tex
+#  includes:
+#    in_header: preamble.tex
+#  latex_engine: xelatex
+#  citation_package: natbib
+#  keep_tex: true
+#  fig_width: 7
+#  fig_height: 4
+#  highlight: tango
 #bookdown::epub_book: default
 #bookdown::word_document2: default
