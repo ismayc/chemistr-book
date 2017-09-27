@@ -1,6 +1,6 @@
 --- 
 title: "LeaRning R in ChemistRy at Reed College"
-author: "Chester Ismay and Danielle Cass"
+author: "Danielle Cass, Chester Ismay, and ITS at Reed"
 date: "`r Sys.Date()`"
 knit: bookdown::render_book
 site: bookdown::bookdown_site
@@ -8,7 +8,7 @@ documentclass: book
 bibliography: [bib/books.bib, bib/packages.bib, bib/articles.bib]
 biblio-style: apalike
 link-citations: yes
-github-repo: ismayc/chemistr-book-source
+github-repo: ismayc/chemistr-book
 description: "A help manual for working with RStudio and R Markdown in completing labs for Chem 101/102 at Reed College"
 ---
 
@@ -71,7 +71,7 @@ knitr::include_graphics("screenshots/initial_rstudio.png")
 
 A good habit to get into whenever you start a new project following a common theme (such as your CHEM 101 labs) with R code is to create a new RStudio project to go along with it.  RStudio project files have the extension `.Rproj` and store metadata that goes along with the documents you've saved and information about the R environment you are working in. More information about RStudio projects is available from RStudio, Inc. [here](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects).
 
-You'll be sharing your Chem 101 labs with your Danielle Cass (`dcass`) and Chester Ismay (`cismay`) using the RStudio Server.  This will allow both of us to help you with errors you may be having in writing your lab report without having to email files back and forth.  You'll just need to email us with the name of the lab you are having troubles with and what you named your RStudio project and we'll be able to go in and look over your R Markdown file.  You can think of this as working somewhat like Google Docs in that both Danielle and I can provide feedback and walk-through your analyses. 
+You'll be sharing your Chem 101 labs with your Danielle Cass (`dcass`) using the RStudio Server.  This will allow Danielle to help you with errors you may be having in writing your lab report without having to email files back and forth.  You'll just need to email Danielle with the name of the lab you are having troubles with and what you named your RStudio project and she'll be able to go in and look over your R Markdown file.  You can think of this as working somewhat like Google Docs in that Danielle can provide feedback and walk-through your analyses. 
 
 To share the project with us, you should follow along with the example below.  Instead of naming your RStudio project `CHEM101_ChesterIsmay` as the GIF shows, you should name it `CHEM101_YourName` where `YourName` is replaced with your first and last names.  Spaces can cause problems in file names so it is recommended that you avoid them.  If you've already shared your project and you have spaces in the name, you'll probably be OK, but try to avoid spaces in your file names going forward.  Calling your project `CHEM101_YourName` will allow Danielle and I to track down your project more easily than if everyone named their project `initial` or something similar.
 
@@ -101,7 +101,7 @@ We encourage you to reach out to both of us and carefully explain what is going 
 
 This tells us that you have tried to figure it out for yourself, but that you require our assistance.  That is to be expected and you shouldn't be discouraged if you don't understand something about R Markdown immediately.  
 
-We are here to help and please don't give up on this.  Learning how to work with R even at the most basic of levels will help you long-term in keeping track of analyses and getting you on the path to reproducible research.  This will help you in your academic careers and whatever you do after your academic career ends. If you need assistance, please email [Danielle](dcass@reed.edu) and [Chester](cismay@reed.edu) with your concise error specifying in which lab and what the name of your RStudio project is.  We are happy to help you learn how to use R!
+We are here to help and please don't give up on this.  Learning how to work with R even at the most basic of levels will help you long-term in keeping track of analyses and getting you on the path to reproducible research.  This will help you in your academic careers and whatever you do after your academic career ends. If you need assistance, please email [Danielle](dcass@reed.edu) with your concise error specifying in which lab and what the name of your RStudio project is.  We are happy to help you learn how to use R!
 
 Additionally, it is extremely helpful for us if you can share a link to your RStudio Project in any emails requesting help.  This link is available by going to your RStudio project in the top right corner of RStudio, clicking on it and then selecting **Share Project**, and then select **Sharing** as seen in the screenshots below.
 
